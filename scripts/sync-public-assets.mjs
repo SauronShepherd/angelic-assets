@@ -1,3 +1,4 @@
+// Sync public production imagery into this repository.
 import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, extname } from 'node:path';
 
