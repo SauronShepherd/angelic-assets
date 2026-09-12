@@ -27,7 +27,7 @@ jobs:
         run: |
           git config user.name "angelic-assets-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add brand newsletter images misc
+          git add -A brand newsletter images misc 2>/dev/null || git add -A brand newsletter images
           if git diff --cached --quiet; then
             echo "No asset changes"
             exit 0
