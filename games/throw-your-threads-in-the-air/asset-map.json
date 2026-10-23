@@ -1,0 +1,317 @@
+[
+  {
+    "sourceFile": "audio/01-museum-main.mp3",
+    "uuidFile": "audio/b2d707ec-e46d-4bb7-9faa-f34e6b7d073e.mp3",
+    "sha256": "4d5a5849f2b3ca76fc77bce4c884b61098f97e047b5439d9bd5744de02f795d2",
+    "bytes": 1397809,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/05-seven-bees.mp3",
+    "uuidFile": "audio/3d448729-9323-4c25-8adb-70c9b03d1019.mp3",
+    "sha256": "4d006d96d4b838c3e7ee83efa50c564081939d24b5021770e4644570e176dc3c",
+    "bytes": 1427331,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/10-museum-threshold.mp3",
+    "uuidFile": "audio/f8d4e3dc-989c-4f49-a5e2-b9d9f66030b7.mp3",
+    "sha256": "ac44348cdcaad2ca309cf2f06d05fa40c24bd90489e2e1dd3b7821bec76357ca",
+    "bytes": 2722308,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/12-continuity-failure-variation.mp3",
+    "uuidFile": "audio/7731a0f8-09c2-4d5b-955c-90c8d6c5e7e3.mp3",
+    "sha256": "be76bb67e4fe75aba8dac775d353b73f10da0321a7cf88db66be71aff6c4d948",
+    "bytes": 3205266,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/12-continuity-failure.mp3",
+    "uuidFile": "audio/a7dc50b7-cbd0-4725-b1a4-0f0677d1b54c.mp3",
+    "sha256": "126ef748b643f241f25bd9f439f60388383208e5d30da2aa28ce6d5bc7087047",
+    "bytes": 3129351,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/13-field-resonance-variation.mp3",
+    "uuidFile": "audio/1c660fb5-b1ec-44d6-b0b4-ec187e259e56.mp3",
+    "sha256": "ffacac45ffa660c55b01611fe5614783e3bbba446f2a2ba5f655c69db99cd817",
+    "bytes": 1731610,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/13-field-resonance.mp3",
+    "uuidFile": "audio/fe630473-9075-4dff-ab0f-e37be616fa9c.mp3",
+    "sha256": "e1326992a0f580ce8a99c652952b593a99953e6a91fae1a140e0849e4c5eff0b",
+    "bytes": 2720636,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/14-wrong-storage-variation.mp3",
+    "uuidFile": "audio/ae66d133-5a8a-4ce6-afcf-45050732a32d.mp3",
+    "sha256": "a497e5cc6069e26f92811b3faa335b98105aba0c7fa20be72ab748a1abad8345",
+    "bytes": 1156020,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/14-wrong-storage.mp3",
+    "uuidFile": "audio/d5aeca71-cb66-4119-af9e-961ebdee0aef.mp3",
+    "sha256": "bb2ffc62b1cd03c46454eda9c68872ae289abd4cce9ccfe699f1880e11d98308",
+    "bytes": 1907404,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/15-human-quiet.mp3",
+    "uuidFile": "audio/0402facf-3cf5-413a-99b9-550e5142609b.mp3",
+    "sha256": "c1c5bb542b26f84cc62659abdc4db5598c0f59b79c7e4e71ad14259731cbfcd6",
+    "bytes": 2972298,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/19-work-process.mp3",
+    "uuidFile": "audio/5a5d54c4-5e22-4941-9e62-d39a6264a562.mp3",
+    "sha256": "0917a56ada88a622c0b68f041ff394f5d6deb87d909041def72e7acb9c830ef9",
+    "bytes": 2638218,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/20-rooftop-wonder.mp3",
+    "uuidFile": "audio/7518ce87-db63-4610-a430-32421b680189.mp3",
+    "sha256": "ae596aee8a9d682aeb9136fa222261ce22840e07b51fbe55df13ce02e89f076e",
+    "bytes": 2855946,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/24-accounting-puzzle.mp3",
+    "uuidFile": "audio/e3109065-509e-4356-bf68-fb92883fa169.mp3",
+    "sha256": "cf787e43185e51fff3e7fd7ff91b745a884c7be2bb4a71b697304718ac2c2754",
+    "bytes": 1225341,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/28-voss-theme.mp3",
+    "uuidFile": "audio/ae192488-353e-4489-9e80-afeec95cf693.mp3",
+    "sha256": "ed1de831064242bdfd01c00907afff48db4d8d214a537f889d385811d10b7600",
+    "bytes": 2897433,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/29-moral-confrontation.mp3",
+    "uuidFile": "audio/0088dfe4-4387-40a2-ac7b-6f51bf474fe0.mp3",
+    "sha256": "862174e39c9681426dd66914ab91aa4bb8b73a5fdf505e49437d225ee50d1348",
+    "bytes": 1711523,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/30-baseline-causal-puzzle.mp3",
+    "uuidFile": "audio/b3ea0be4-6664-44aa-bf6c-b9ef2cb1541e.mp3",
+    "sha256": "aba48e4b9d1e7e6872e4f70e97bb2727eaeacec7efc08bc0bc3e3de9fad2b32e",
+    "bytes": 1436890,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/31-early-fallout-variation.mp3",
+    "uuidFile": "audio/d2d208e7-dc20-4cf9-bc01-5a3e45ded931.mp3",
+    "sha256": "65a6ee3d2c83b1199818fe2bab058fa9191fc451360428133db1fd01c2992147",
+    "bytes": 3940332,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/31-early-fallout.mp3",
+    "uuidFile": "audio/00e6c3e6-4dfa-4191-89e6-36868cefcc18.mp3",
+    "sha256": "5fe3af4b0238c10c8fa017669106220b8810abc07491a40a13167145a706cf23",
+    "bytes": 4262710,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/39-final-causal-board-variation.mp3",
+    "uuidFile": "audio/f6bc281b-cb34-4627-86f9-87a8ab932201.mp3",
+    "sha256": "d9f87c9e7980e06743b7054a2a0a00303669aa2102169807613cec09868e2af3",
+    "bytes": 1354697,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/39-final-causal-board.mp3",
+    "uuidFile": "audio/f0eb0314-6f40-4e7c-8849-2ea634a47a53.mp3",
+    "sha256": "990bea7ff05b0a62270cf8f2bdd1ff77ef1109cb8ef153a6d299a027ccf35464",
+    "bytes": 1192955,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/40-final-solution.mp3",
+    "uuidFile": "audio/a6de1b7d-54bb-4d80-a551-ec6de0c5c439.mp3",
+    "sha256": "9d37e1141504d6a11f402543447aafd24d2030d8893c33b591b09bce61ed40bd",
+    "bytes": 3517271,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "audio/45-first-story-finale.mp3",
+    "uuidFile": "audio/87d27aa4-badf-4378-8b11-410839419eaf.mp3",
+    "sha256": "d7f54d6f33d4fbbdbb509b9e5e79b226777efb766e758488497288a6ed88de2b",
+    "bytes": 2018404,
+    "mediaType": "audio/mpeg"
+  },
+  {
+    "sourceFile": "characters/hyde.svg",
+    "uuidFile": "characters/f089f6ad-d15e-466d-9ac2-a0334391ecf0.svg",
+    "sha256": "0db46f91d556f2ff3430d79aa58a63e8fac0e24dfcc177c6aada23d5a868bcf2",
+    "bytes": 1287,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/jekyll.svg",
+    "uuidFile": "characters/2968fbb0-52af-4f32-813d-7c98a5eaa8af.svg",
+    "sha256": "46acbc67e85a5e7888cbfc8680fba9d52331a6acec76c7d933d4d207809db751",
+    "bytes": 1273,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/memory-reaper.svg",
+    "uuidFile": "characters/4be9b3af-4529-49d9-8f9b-37f2f922d1c6.svg",
+    "sha256": "9e0c4e21850ced82ee8de7d017b138160361b2c3e1b1aaacbda324c3ef3de335",
+    "bytes": 1163,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/mirror-twins.svg",
+    "uuidFile": "characters/a6bacf53-a74b-45fa-803a-6e21f4d1c777.svg",
+    "sha256": "3493751f0f92c07830221be8c481cdb445abcb4b47cdd0d781683dabd3e880ce",
+    "bytes": 1167,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/pip-lantern-mouse.svg",
+    "uuidFile": "characters/8cd134c0-cbc5-4543-b610-eef1bd91cc33.svg",
+    "sha256": "459bd3225d56f39caa17417900f85085c6ebfabd69ce8c28013740346b7f120a",
+    "bytes": 1458,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/retry-accountant.svg",
+    "uuidFile": "characters/836d3ee9-d64d-46ca-b09b-e8e90fac522a.svg",
+    "sha256": "21d8cd0859674c9ab5e9fc3f758a7230e8cb511f31cb06a9eb5a8ff1b2316610",
+    "bytes": 1234,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/role-architect.svg",
+    "uuidFile": "characters/cd98ace2-11f4-4987-b147-e3721a1034b4.svg",
+    "sha256": "ecbc0e2fc65a01b9bc3fb3d38be9d19325361d894e2cbba9d8fad5baeb347928",
+    "bytes": 964,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/role-junior.svg",
+    "uuidFile": "characters/23e8a830-cf11-456c-b777-d04eb1e38b03.svg",
+    "sha256": "47876b315e312df60f6ebb542bbb7124ab3915e8a64ab7829b152416a5917f58",
+    "bytes": 908,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/role-senior.svg",
+    "uuidFile": "characters/2e67346b-0b9e-4f13-b6d9-d2d4e3798049.svg",
+    "sha256": "d41857c657b8a5ba98dba5d060a6ae2ba477e44ad441fc1d4f542a242e59c088",
+    "bytes": 940,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/sister-semaphore.svg",
+    "uuidFile": "characters/bda73f5d-6b1e-4e34-b1fa-686401c38a5d.svg",
+    "sha256": "0438fbebba924922a5714a4fde1d9bab3dad954443c3003a051b78e1ea1f59f5",
+    "bytes": 1171,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/tangle-wraith.svg",
+    "uuidFile": "characters/3cee6866-8e00-49a9-8163-57a3f5360f26.svg",
+    "sha256": "12241c7639c5723483c426005f95c22cf59af80da5b975195e5d4f3486cf5d3a",
+    "bytes": 1320,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/vee-virtual-thread.svg",
+    "uuidFile": "characters/cc5e6292-b51c-4682-a489-f5c66494188d.svg",
+    "sha256": "39b69e71c4714ff369511f5579271209282e575852ad146355e27ce9e55c0ecf",
+    "bytes": 1355,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/warden-pid.svg",
+    "uuidFile": "characters/5118fac0-e6d1-4ec1-86a7-7185e0922b5d.svg",
+    "sha256": "a083d40bb6fd175b5136b989d958f85ff46b7685f1bad7eba01a990264c3c3bf",
+    "bytes": 1319,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "condition-room.png",
+    "uuidFile": "913a82bc-b1f6-47e9-9303-73c98f629924.png",
+    "sha256": "0670b4d1e15acfc09ab1e8721d551704b1be7bb749b0509cabfc38052c6e51d9",
+    "bytes": 2395223,
+    "mediaType": "image/png"
+  },
+  {
+    "sourceFile": "executor-workshop.png",
+    "uuidFile": "8f16e7f7-cdd8-44c1-bd00-5efe4e12b0a6.png",
+    "sha256": "29db0d7bff5f93bc6ea9eb351cd7b097bc71269979ceda3b606d2d6c68018677",
+    "bytes": 2806643,
+    "mediaType": "image/png"
+  },
+  {
+    "sourceFile": "jekyll-hyde-lab.png",
+    "uuidFile": "d093d052-dbfe-490e-a6e8-896f58e3b5c7.png",
+    "sha256": "72730fbb9cfeb44175d9333f2bff2250d3e50bd7c7226b784e77127b7469ee38",
+    "bytes": 2738983,
+    "mediaType": "image/png"
+  },
+  {
+    "sourceFile": "loom-carnival.png",
+    "uuidFile": "5f617c29-cebe-496c-b859-0d02ebc487d6.png",
+    "sha256": "4a53ad81e5fafd4613b7904e95b0476aa18e4c23c9489ef5ad5cb732aa3eceee",
+    "bytes": 2962905,
+    "mediaType": "image/png"
+  },
+  {
+    "sourceFile": "memory-cemetery.png",
+    "uuidFile": "004e69ed-0e86-4a11-a25e-529663be2cb8.png",
+    "sha256": "56a31ca3711f6b9b88fff5c85c41e47e1e02562d671d3c5649facf84e855bedf",
+    "bytes": 2723609,
+    "mediaType": "image/png"
+  },
+  {
+    "sourceFile": "mirror-chapel.png",
+    "uuidFile": "5fdd7fc5-1938-42a4-b9fe-eb42cb5216cd.png",
+    "sha256": "175b36ea45dcdc951a838ffc20488909c6087b46f2e5072749fde781c91d1a52",
+    "bytes": 2770864,
+    "mediaType": "image/png"
+  },
+  {
+    "sourceFile": "retry-ledger.png",
+    "uuidFile": "a3b00847-549a-4967-b506-de6e8b470506.png",
+    "sha256": "17f4a9017b585af755800ee4e241db4d950b9ac6ba457ad42492083ec66c95b1",
+    "bytes": 2353070,
+    "mediaType": "image/png"
+  },
+  {
+    "sourceFile": "thread-cathedral.png",
+    "uuidFile": "62f21364-4fcd-49e0-9e49-d6812e678c50.png",
+    "sha256": "ac429290013560d0c87b495ad3200519a185a137c730dd4ac31d51a98165a0fd",
+    "bytes": 2856322,
+    "mediaType": "image/png"
+  },
+  {
+    "sourceFile": "threadvale-manor.png",
+    "uuidFile": "a731b910-abfa-4c23-a863-e4dc7074e62a.png",
+    "sha256": "0bbabe0dcba0f056b71ef2bab2e69e09029142d3a164636c15c95d77651ab6ed",
+    "bytes": 2612408,
+    "mediaType": "image/png"
+  },
+  {
+    "sourceFile": "characters/edda-vale.svg",
+    "uuidFile": "characters/7bb34c39-536f-4297-af1e-99717501c16f.svg",
+    "sha256": "70bc74cc41fdcc81497b81d873712fc1d8e7df9f481c04197424a0de50538225",
+    "bytes": 2202,
+    "mediaType": "image/svg+xml"
+  }
+]
