@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img">
+<title>Three clocks: event time, commit time, and query time</title><desc>A late event is recorded after it happened; a query selects a table state after that commit.</desc>
+<defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#101827"/><stop offset="1" stop-color="#070b14"/></linearGradient></defs>
+<rect width="1200" height="650" rx="28" fill="url(#bg)"/>
+<text x="60" y="76" fill="#f4f7ff" font-family="Arial,sans-serif" font-size="35" font-weight="700">THREE CLOCKS. ONE VERY CONFIDENT MISUNDERSTANDING.</text>
+<text x="62" y="118" fill="#9fb2cf" font-family="Arial,sans-serif" font-size="20">Larry's business event happened first. The table learned about it later.</text>
+<line x1="130" y1="330" x2="1080" y2="330" stroke="#62748e" stroke-width="5"/>
+<path d="M1080 318 L1104 330 L1080 342" fill="none" stroke="#62748e" stroke-width="5"/>
+<circle cx="285" cy="330" r="18" fill="#ffcf70"/><circle cx="650" cy="330" r="18" fill="#76d7c4"/><circle cx="970" cy="330" r="18" fill="#a994ff"/>
+<text x="170" y="250" fill="#ffcf70" font-family="Arial,sans-serif" font-size="26" font-weight="700">EVENT TIME</text>
+<text x="170" y="285" fill="#e4eaf5" font-family="Arial,sans-serif" font-size="20">2026-08-10 09:15</text>
+<text x="540" y="250" fill="#76d7c4" font-family="Arial,sans-serif" font-size="26" font-weight="700">COMMIT TIME</text>
+<text x="540" y="285" fill="#e4eaf5" font-family="Arial,sans-serif" font-size="20">Delta version 8</text>
+<text x="873" y="250" fill="#a994ff" font-family="Arial,sans-serif" font-size="26" font-weight="700">QUERY TIME</text>
+<text x="873" y="285" fill="#e4eaf5" font-family="Arial,sans-serif" font-size="20">You ask for version 8</text>
+<rect x="95" y="410" width="270" height="110" rx="18" fill="#2a2415" stroke="#ffcf70" stroke-width="2"/>
+<text x="122" y="455" fill="#ffcf70" font-family="Arial,sans-serif" font-size="22" font-weight="700">The row happened.</text><text x="122" y="489" fill="#dce4f2" font-family="Arial,sans-serif" font-size="18">No table knew yet.</text>
+<rect x="480" y="410" width="310" height="110" rx="18" fill="#122a29" stroke="#76d7c4" stroke-width="2"/>
+<text x="507" y="455" fill="#76d7c4" font-family="Arial,sans-serif" font-size="22" font-weight="700">The row is committed.</text><text x="507" y="489" fill="#dce4f2" font-family="Arial,sans-serif" font-size="18">History now includes it.</text>
+<rect x="885" y="410" width="230" height="110" rx="18" fill="#211b35" stroke="#a994ff" stroke-width="2"/>
+<text x="910" y="455" fill="#a994ff" font-family="Arial,sans-serif" font-size="22" font-weight="700">The reader asks.</text><text x="910" y="489" fill="#dce4f2" font-family="Arial,sans-serif" font-size="18">A coordinate matters.</text>
+<text x="100" y="584" fill="#f5f7fb" font-family="Arial,sans-serif" font-size="22" font-weight="700">Old event_time ≠ old table state. Query time does not travel backwards by itself.</text>
+</svg>

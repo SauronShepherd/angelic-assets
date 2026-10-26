@@ -13,6 +13,13 @@ const ROOT_ASSETS = [
 
 const IMAGE_RE = /(?:src|content)=["']([^"']+\.(?:png|jpe?g|webp|gif|svg)(?:\?[^"']*)?)["']/gi;
 const LINK_RE = /href=["']([^"'#]+)["']/gi;
+const LEGACY_ARTICLE_PREFIXES = [
+  ['apache-spark-wtf', 'wtf'],
+  ['bricking-news', 'bricking-news'],
+  ['fga', 'fga'],
+  ['sda', 'sda'],
+  ['misc', 'misc'],
+];
 
 const normalizeUrl = (value) => {
   try {
@@ -29,6 +36,17 @@ const targetPath = (url) => {
   if (path === 'angel-writer.png' || path === 'logo-angelic-articles.png') return `brand/${path}`;
   if (path === 'newsletter-header.png') return `newsletter/${path}`;
   if (path === 'shop-banner.png') return `brand/${path}`;
+  const legacyArticleImage = path.match(/^images\/articles\/([^/]+)--([^/]+)\/(.+)$/);
+  if (legacyArticleImage) {
+    const [, prefix, article, file] = legacyArticleImage;
+    const mapping = LEGACY_ARTICLE_PREFIXES.find(([name]) => name === prefix);
+    if (mapping) {
+      const section = prefix === 'apache-spark-wtf' && article === 'spark-in-the-dark'
+        ? 'bricking-news'
+        : mapping[1];
+      return `images/articles/${section}/${article}/${file}`;
+    }
+  }
   if (path.startsWith('images/')) return path;
   return `misc/${path}`;
 };

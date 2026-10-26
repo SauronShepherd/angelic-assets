@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img">
+<title>Apache XTable translates metadata from one primary format to secondary formats</title><desc>A single primary writer updates the source table; XTable reads its metadata and writes Iceberg and Delta metadata that point to the same Parquet data files.</desc>
+<rect width="1200" height="720" rx="28" fill="#101321"/>
+<text x="58" y="72" fill="#f6f4ff" font-family="Arial,sans-serif" font-size="36" font-weight="700">APACHE XTABLE: CHANGE THE MAP, KEEP THE TERRITORY</text>
+<rect x="55" y="135" width="270" height="150" rx="20" fill="#192745" stroke="#69a9ff" stroke-width="2"/>
+<text x="82" y="182" fill="#69a9ff" font-family="Arial,sans-serif" font-size="25" font-weight="700">PRIMARY WRITER</text><text x="82" y="220" fill="#e8edf7" font-family="Arial,sans-serif" font-size="20">Hudi OR Delta OR</text><text x="82" y="250" fill="#e8edf7" font-family="Arial,sans-serif" font-size="20">Iceberg owns commits</text>
+<path d="M325 210 H460" stroke="#f0ca65" stroke-width="5"/><path d="M450 198 L475 210 L450 222" fill="none" stroke="#f0ca65" stroke-width="5"/>
+<rect x="480" y="130" width="265" height="165" rx="20" fill="#26203a" stroke="#c484ff" stroke-width="2"/>
+<text x="520" y="177" fill="#c484ff" font-family="Arial,sans-serif" font-size="27" font-weight="700">XTABLE SYNC</text><text x="510" y="220" fill="#e8edf7" font-family="Arial,sans-serif" font-size="19">reads source metadata</text><text x="510" y="250" fill="#e8edf7" font-family="Arial,sans-serif" font-size="19">writes target metadata</text><text x="530" y="278" fill="#f0ca65" font-family="Arial,sans-serif" font-size="18">data files stay put</text>
+<path d="M745 185 C810 185 810 150 870 150" stroke="#70dfbd" stroke-width="4" fill="none"/><path d="M745 235 C810 235 810 345 870 345" stroke="#70dfbd" stroke-width="4" fill="none"/>
+<rect x="875" y="105" width="270" height="105" rx="18" fill="#18332f" stroke="#70dfbd" stroke-width="2"/>
+<text x="928" y="150" fill="#70dfbd" font-family="Arial,sans-serif" font-size="23" font-weight="700">ICEBERG VIEW</text><text x="905" y="184" fill="#e8edf7" font-family="Arial,sans-serif" font-size="18">metadata + same data</text>
+<rect x="875" y="300" width="270" height="105" rx="18" fill="#18332f" stroke="#70dfbd" stroke-width="2"/>
+<text x="950" y="345" fill="#70dfbd" font-family="Arial,sans-serif" font-size="23" font-weight="700">DELTA VIEW</text><text x="905" y="379" fill="#e8edf7" font-family="Arial,sans-serif" font-size="18">metadata + same data</text>
+<rect x="350" y="455" width="500" height="120" rx="22" fill="#332a17" stroke="#f0ca65" stroke-width="2"/>
+<text x="485" y="503" fill="#f0ca65" font-family="Arial,sans-serif" font-size="27" font-weight="700">SHARED PARQUET FILES</text><text x="412" y="541" fill="#e8edf7" font-family="Arial,sans-serif" font-size="20">The territory both maps point at</text>
+<path d="M240 285 C240 400 400 420 480 455" stroke="#69a9ff" stroke-width="3" fill="none"/><path d="M970 210 C950 360 850 395 800 455" stroke="#70dfbd" stroke-width="3" fill="none"/><path d="M970 405 C940 440 880 455 850 470" stroke="#70dfbd" stroke-width="3" fill="none"/>
+<rect x="75" y="610" width="1050" height="66" rx="16" fill="#321e28" stroke="#ff8b83" stroke-width="2"/>
+<text x="116" y="652" fill="#ffaaa4" font-family="Arial,sans-serif" font-size="22" font-weight="700">ONE WRITER OF RECORD. XTable is not a cross-format transaction coordinator.</text>
+</svg>

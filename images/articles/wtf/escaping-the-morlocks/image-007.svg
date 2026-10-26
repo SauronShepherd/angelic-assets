@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img">
+<title>Historical reads need both retained metadata and retained data files</title><desc>A snapshot is readable only while its metadata coordinate and all required physical data files remain available.</desc>
+<rect width="1200" height="600" rx="28" fill="#111521"/>
+<text x="58" y="76" fill="#f5f6fa" font-family="Arial,sans-serif" font-size="35" font-weight="700">A MAP WITHOUT THE ROAD IS A VERY SAD MAP.</text>
+<rect x="78" y="150" width="450" height="330" rx="20" fill="#171f31" stroke="#7db6ff" stroke-width="2"/>
+<text x="120" y="205" fill="#7db6ff" font-family="Arial,sans-serif" font-size="27" font-weight="700">HISTORICAL METADATA</text>
+<rect x="125" y="245" width="330" height="62" rx="13" fill="#253550"/><text x="160" y="285" fill="#eaf1fc" font-family="Arial,sans-serif" font-size="21">snapshot / version / instant</text>
+<path d="M290 307 V370" stroke="#90d4bd" stroke-width="5"/><path d="M278 356 L290 380 L302 356" fill="none" stroke="#90d4bd" stroke-width="5"/>
+<rect x="675" y="150" width="450" height="330" rx="20" fill="#171f31" stroke="#90d4bd" stroke-width="2"/>
+<text x="740" y="205" fill="#90d4bd" font-family="Arial,sans-serif" font-size="27" font-weight="700">PHYSICAL DATA</text>
+<rect x="735" y="245" width="330" height="62" rx="13" fill="#253550"/><text x="790" y="285" fill="#eaf1fc" font-family="Arial,sans-serif" font-size="21">Parquet + delete files</text>
+<path d="M530 280 H660" stroke="#90d4bd" stroke-width="5"/><path d="M648 268 L672 280 L648 292" fill="none" stroke="#90d4bd" stroke-width="5"/>
+<rect x="735" y="370" width="330" height="62" rx="13" fill="#3b1e26" stroke="#ff8585" stroke-width="2"/><text x="795" y="410" fill="#ffb0a9" font-family="Arial,sans-serif" font-size="21">VACUUM / CLEANER</text>
+<path d="M745 465 L1038 315" stroke="#ff8585" stroke-width="9"/><path d="M745 315 L1038 465" stroke="#ff8585" stroke-width="9"/>
+<text x="105" y="550" fill="#f5f6fa" font-family="Arial,sans-serif" font-size="22" font-weight="700">Readable history = retained coordinate AND retained bytes AND compatible reader.</text>
+</svg>

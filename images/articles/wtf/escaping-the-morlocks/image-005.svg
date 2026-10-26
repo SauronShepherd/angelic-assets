@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img">
+<title>Delta UniForm writes Delta first then creates Iceberg or Hudi metadata asynchronously</title><desc>Delta commit version 12 is visible before UniForm metadata catches up; a converted version marker shows the latest translated version.</desc>
+<rect width="1200" height="660" rx="28" fill="#0c1520"/>
+<text x="58" y="76" fill="#f6f7fb" font-family="Arial,sans-serif" font-size="36" font-weight="700">UNIFORM: DELTA COMMITS FIRST. THE TRANSLATOR CATCHES UP.</text>
+<text x="62" y="117" fill="#aebdd2" font-family="Arial,sans-serif" font-size="20">OSS Delta Lake UniForm creates secondary metadata after the primary Delta transaction.</text>
+<text x="80" y="205" fill="#64d99b" font-family="Arial,sans-serif" font-size="24" font-weight="700">DELTA LANE</text>
+<line x1="250" y1="205" x2="1070" y2="205" stroke="#64d99b" stroke-width="5"/>
+<circle cx="425" cy="205" r="20" fill="#64d99b"/><circle cx="660" cy="205" r="20" fill="#64d99b"/><circle cx="895" cy="205" r="20" fill="#64d99b"/>
+<text x="390" y="255" fill="#e8eff8" font-family="Arial,sans-serif" font-size="20">v10</text><text x="625" y="255" fill="#e8eff8" font-family="Arial,sans-serif" font-size="20">v11</text><text x="860" y="255" fill="#e8eff8" font-family="Arial,sans-serif" font-size="20">v12 · committed</text>
+<text x="80" y="360" fill="#55bcff" font-family="Arial,sans-serif" font-size="24" font-weight="700">ICEBERG LANE</text>
+<line x1="250" y1="360" x2="1070" y2="360" stroke="#42546a" stroke-width="5"/>
+<circle cx="425" cy="360" r="18" fill="#55bcff"/><circle cx="660" cy="360" r="18" fill="#55bcff"/>
+<text x="390" y="410" fill="#e8eff8" font-family="Arial,sans-serif" font-size="20">snapshot S10</text><text x="625" y="410" fill="#e8eff8" font-family="Arial,sans-serif" font-size="20">snapshot S11</text>
+<path d="M910 225 C910 290 680 290 680 340" stroke="#ffcb68" stroke-width="4" stroke-dasharray="10 9" fill="none"/>
+<rect x="745" y="286" width="300" height="58" rx="14" fill="#352b17" stroke="#ffcb68" stroke-width="2"/>
+<text x="780" y="324" fill="#ffdf9a" font-family="Arial,sans-serif" font-size="19" font-weight="700">ASYNC CONVERSION IN FLIGHT</text>
+<rect x="77" y="488" width="1045" height="112" rx="18" fill="#162439" stroke="#7595bd" stroke-width="2"/>
+<text x="110" y="532" fill="#c4d7f2" font-family="Arial,sans-serif" font-size="21" font-weight="700">CHECK THE MARKER BEFORE CLAIMING “LATEST”</text>
+<text x="110" y="572" fill="#e6edf8" font-family="Arial,sans-serif" font-size="20">converted_delta_version = 11  →  Iceberg currently describes Delta through v11, not v12.</text>
+<text x="80" y="630" fill="#ffaaa4" font-family="Arial,sans-serif" font-size="18">One Delta commit may not equal one secondary-format snapshot. Format IDs never become interchangeable.</text>
+</svg>
