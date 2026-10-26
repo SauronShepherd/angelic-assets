@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-labelledby="title desc">
+  <title id="title">The Threadvale Hollow-Eyed Lantern</title>
+  <desc id="desc">A wicked, hand-carved pumpkin with a twisted thorny stem, ember-lit eye sockets, a crooked fang-filled grin, and stitched scars.</desc>
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="58%" r="56%">
+      <stop stop-color="#fff2a7" stop-opacity=".8"/><stop offset=".35" stop-color="#ff6a21" stop-opacity=".34"/><stop offset="1" stop-color="#e82132" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="skin" x1=".13" y1=".08" x2=".88" y2=".94">
+      <stop stop-color="#ffe078"/><stop offset=".2" stop-color="#ff9e32"/><stop offset=".49" stop-color="#e86020"/><stop offset=".77" stop-color="#a93425"/><stop offset="1" stop-color="#501827"/>
+    </linearGradient>
+    <linearGradient id="rib" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ffe078" stop-opacity=".04"/><stop offset=".5" stop-color="#511924" stop-opacity=".55"/><stop offset="1" stop-color="#ffd465" stop-opacity=".12"/></linearGradient>
+    <linearGradient id="cut-edge" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffcf56"/><stop offset=".48" stop-color="#ff7427"/><stop offset="1" stop-color="#8f2027"/></linearGradient>
+    <linearGradient id="fire" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff8b0"/><stop offset=".38" stop-color="#ffb52e"/><stop offset="1" stop-color="#ef342d"/></linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#adbd62"/><stop offset=".55" stop-color="#647c43"/><stop offset="1" stop-color="#263a35"/></linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="13"/></filter>
+    <filter id="carved-glow" x="-45%" y="-45%" width="190%" height="190%"><feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur"/><feFlood flood-color="#ff6328" flood-opacity=".9"/><feComposite in2="blur" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur"/><feOffset dy="8" result="offset"/><feComponentTransfer><feFuncA type="linear" slope=".48"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <ellipse cx="240" cy="276" rx="194" ry="188" fill="url(#halo)" opacity=".95" filter="url(#glow)"/>
+
+  <!-- A crooked stalk, with a thorn and the remains of a dead leaf. -->
+  <path d="M229 163c-17-39-7-72 28-101 4 22 2 40-7 55 22-31 52-43 90-34-15 31-41 51-78 61l-4 33z" fill="url(#leaf)" stroke="#263a32" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M251 139c19-30 47-51 83-61M252 146c-4-22-1-41 10-58" fill="none" stroke="#d0cb75" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+  <path d="M220 163c-13-23-30-36-52-39 8 25 23 41 47 49" fill="#687d46" stroke="#354433" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M287 91l13-20 3 20 18-10-12 20" fill="#4e633b" stroke="#28382f" stroke-width="5" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <!-- Knobbly, asymmetrical shell. -->
+    <path d="M235 151c-35-14-79-2-108 30-37 40-53 94-48 151 5 62 42 113 93 137 38 18 91 17 137 1 57-20 93-70 98-132 4-54-12-103-48-141-29-31-70-43-108-30l-13-19z" fill="url(#skin)" stroke="#62232b" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M228 160c-31 44-39 97-31 151 7 54 22 105 38 151-38-6-70-20-94-47-27-30-39-72-36-117 3-48 20-90 48-115 22-20 48-29 75-23z" fill="url(#rib)"/>
+    <path d="M268 158c31 45 39 99 31 153-7 54-22 105-38 151 39-6 72-20 96-48 27-30 38-71 35-116-3-48-20-90-48-115-22-20-48-29-76-25z" fill="url(#rib)"/>
+    <path d="M241 155c-16 53-17 100-9 152 7 52 13 105 8 154 17 5 35 5 52 0-5-49 1-102 8-154 8-52 7-99-9-152-17-8-34-8-50 0z" fill="#ffb43e" opacity=".28"/>
+    <path d="M117 308c-4 25 0 47 10 68M353 172c15 6 28 16 38 30M143 379c20 27 45 43 75 51" fill="none" stroke="#ffd36a" stroke-width="6" stroke-linecap="round" opacity=".7"/>
+  </g>
+
+  <!-- Deep, uneven eye sockets; the tiny slits are the lantern looking back. -->
+  <g filter="url(#carved-glow)">
+    <path d="M112 231c29-34 65-43 111-19l-31 69c-31-4-58-21-80-50z" fill="#28121b" stroke="url(#cut-edge)" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M259 211c47-26 83-17 111 20-23 29-50 45-81 50z" fill="#28121b" stroke="url(#cut-edge)" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M169 226c8-8 17-9 26-2l-8 37c-7 6-14 4-20-3zM309 224c8-6 17-4 23 5l-10 34c-7 4-14 1-19-7z" fill="url(#fire)"/>
+    <path d="M179 229l-3 19M319 228l-4 19" stroke="#35131c" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <path d="M106 213c34-34 74-43 121-18M253 194c47-27 88-18 123 20" fill="none" stroke="#63212b" stroke-width="14" stroke-linecap="round"/>
+  <path d="M119 207c28-20 56-28 86-22M269 189c30-11 56-7 78 10" fill="none" stroke="#ffb342" stroke-width="4" stroke-linecap="round" opacity=".72"/>
+
+  <!-- A tiny nose of three jagged cuts. -->
+  <path d="M219 292l21-25 9 24 18-22 10 31-26 14-31-8z" fill="#28121b" stroke="#a33a2d" stroke-width="5" stroke-linejoin="round"/>
+
+  <!-- The grin is a torn, ember-lit carving, not a row of tidy square teeth. -->
+  <path d="M123 338c36-28 73-36 112-19l17 9c28-25 70-21 109 7-8 28-19 45-34 59-30 28-77 31-116 21-43-11-73-36-88-77z" fill="#27111a" stroke="url(#cut-edge)" stroke-width="9" stroke-linejoin="round" filter="url(#carved-glow)"/>
+  <path d="M143 336c30-18 58-23 83-14l-12 30-23-13-10 28-22-19-14 20zM262 321c30-10 57-5 81 12l-17 19-20-16-12 29-20-22-16 17z" fill="url(#fire)" stroke="#ffc553" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M159 373l23-22 8 38 20-26 15 46c-29-5-51-17-66-36zM257 408l17-42 18 34 14-41 15 39c-21 13-44 16-64 10z" fill="url(#fire)" stroke="#f5a83b" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M226 346l15-13 12 12-12 23zM331 354l22-15-8 29-19 8z" fill="#fff0ad" stroke="#d78735" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- Gouges, stitches, and little flecks make this one look improperly buried. -->
+  <path d="M91 283l19-22 12 6-17 22 18 1-22 21M370 289l21-18 7 6-18 21 18 0-17 18" fill="none" stroke="#69212b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M128 317l18-13M132 326l19-12M355 313l18 14M348 321l17 15" fill="none" stroke="#ffcf63" stroke-width="3" stroke-linecap="round" opacity=".75"/>
+  <path d="M202 179l-8 13m-4-15l-8 13M332 179l-9 13m-4-16l-8 14" stroke="#491923" stroke-width="4" stroke-linecap="round"/>
+  <path d="M99 191c-10-12-8-25 5-37 7 14 6 26-5 37zM393 374c13 1 21 8 25 21-15-2-23-8-25-21z" fill="#ffdc7a" opacity=".8"/>
+</svg>

@@ -154,164 +154,451 @@
     "mediaType": "audio/mpeg"
   },
   {
-    "sourceFile": "characters/hyde.svg",
-    "uuidFile": "characters/f089f6ad-d15e-466d-9ac2-a0334391ecf0.svg",
-    "sha256": "0db46f91d556f2ff3430d79aa58a63e8fac0e24dfcc177c6aada23d5a868bcf2",
-    "bytes": 1287,
-    "mediaType": "image/svg+xml"
+    "sourceFile": "boiler-crypt.webp",
+    "uuidFile": "411e5cbb-83e1-4e49-9fcc-dfae90b60d12.webp",
+    "sha256": "62fc0663363cc445074d5132231164f76f16b7a1f07c3715c018f584815b759f",
+    "bytes": 427136,
+    "mediaType": "image/webp"
   },
   {
-    "sourceFile": "characters/jekyll.svg",
-    "uuidFile": "characters/2968fbb0-52af-4f32-813d-7c98a5eaa8af.svg",
-    "sha256": "46acbc67e85a5e7888cbfc8680fba9d52331a6acec76c7d933d4d207809db751",
-    "bytes": 1273,
-    "mediaType": "image/svg+xml"
+    "sourceFile": "characters/archive-ghost-illustrated.webp",
+    "uuidFile": "characters/1a75cd2e-b61c-4901-b06e-f09c6a264b4d.webp",
+    "sha256": "e7ed278d6efec4caf65eab45314847b45b07e1a2bb1ee138de6947c84c9fecc4",
+    "bytes": 199936,
+    "mediaType": "image/webp"
   },
   {
-    "sourceFile": "characters/memory-reaper.svg",
-    "uuidFile": "characters/4be9b3af-4529-49d9-8f9b-37f2f922d1c6.svg",
-    "sha256": "9e0c4e21850ced82ee8de7d017b138160361b2c3e1b1aaacbda324c3ef3de335",
-    "bytes": 1163,
-    "mediaType": "image/svg+xml"
-  },
-  {
-    "sourceFile": "characters/mirror-twins.svg",
-    "uuidFile": "characters/a6bacf53-a74b-45fa-803a-6e21f4d1c777.svg",
-    "sha256": "3493751f0f92c07830221be8c481cdb445abcb4b47cdd0d781683dabd3e880ce",
-    "bytes": 1167,
-    "mediaType": "image/svg+xml"
-  },
-  {
-    "sourceFile": "characters/pip-lantern-mouse.svg",
-    "uuidFile": "characters/8cd134c0-cbc5-4543-b610-eef1bd91cc33.svg",
-    "sha256": "459bd3225d56f39caa17417900f85085c6ebfabd69ce8c28013740346b7f120a",
-    "bytes": 1458,
-    "mediaType": "image/svg+xml"
-  },
-  {
-    "sourceFile": "characters/retry-accountant.svg",
-    "uuidFile": "characters/836d3ee9-d64d-46ca-b09b-e8e90fac522a.svg",
-    "sha256": "21d8cd0859674c9ab5e9fc3f758a7230e8cb511f31cb06a9eb5a8ff1b2316610",
-    "bytes": 1234,
-    "mediaType": "image/svg+xml"
-  },
-  {
-    "sourceFile": "characters/role-architect.svg",
-    "uuidFile": "characters/cd98ace2-11f4-4987-b147-e3721a1034b4.svg",
-    "sha256": "ecbc0e2fc65a01b9bc3fb3d38be9d19325361d894e2cbba9d8fad5baeb347928",
-    "bytes": 964,
-    "mediaType": "image/svg+xml"
-  },
-  {
-    "sourceFile": "characters/role-junior.svg",
-    "uuidFile": "characters/23e8a830-cf11-456c-b777-d04eb1e38b03.svg",
-    "sha256": "47876b315e312df60f6ebb542bbb7124ab3915e8a64ab7829b152416a5917f58",
-    "bytes": 908,
-    "mediaType": "image/svg+xml"
-  },
-  {
-    "sourceFile": "characters/role-senior.svg",
-    "uuidFile": "characters/2e67346b-0b9e-4f13-b6d9-d2d4e3798049.svg",
-    "sha256": "d41857c657b8a5ba98dba5d060a6ae2ba477e44ad441fc1d4f542a242e59c088",
-    "bytes": 940,
-    "mediaType": "image/svg+xml"
-  },
-  {
-    "sourceFile": "characters/sister-semaphore.svg",
-    "uuidFile": "characters/bda73f5d-6b1e-4e34-b1fa-686401c38a5d.svg",
-    "sha256": "0438fbebba924922a5714a4fde1d9bab3dad954443c3003a051b78e1ea1f59f5",
-    "bytes": 1171,
-    "mediaType": "image/svg+xml"
-  },
-  {
-    "sourceFile": "characters/tangle-wraith.svg",
-    "uuidFile": "characters/3cee6866-8e00-49a9-8163-57a3f5360f26.svg",
-    "sha256": "12241c7639c5723483c426005f95c22cf59af80da5b975195e5d4f3486cf5d3a",
-    "bytes": 1320,
-    "mediaType": "image/svg+xml"
-  },
-  {
-    "sourceFile": "characters/vee-virtual-thread.svg",
-    "uuidFile": "characters/cc5e6292-b51c-4682-a489-f5c66494188d.svg",
-    "sha256": "39b69e71c4714ff369511f5579271209282e575852ad146355e27ce9e55c0ecf",
-    "bytes": 1355,
-    "mediaType": "image/svg+xml"
-  },
-  {
-    "sourceFile": "characters/warden-pid.svg",
-    "uuidFile": "characters/5118fac0-e6d1-4ec1-86a7-7185e0922b5d.svg",
-    "sha256": "a083d40bb6fd175b5136b989d958f85ff46b7685f1bad7eba01a990264c3c3bf",
-    "bytes": 1319,
-    "mediaType": "image/svg+xml"
-  },
-  {
-    "sourceFile": "condition-room.png",
-    "uuidFile": "913a82bc-b1f6-47e9-9303-73c98f629924.png",
-    "sha256": "0670b4d1e15acfc09ab1e8721d551704b1be7bb749b0509cabfc38052c6e51d9",
-    "bytes": 2395223,
+    "sourceFile": "characters/archive-ghost.png",
+    "uuidFile": "characters/eeb0c0a8-849a-44cf-92b0-9e651dd7e4c4.png",
+    "sha256": "01eb0b579bf17386b8083b540679a19149b01d97c60a4045906aa4bad7d650a4",
+    "bytes": 2451833,
     "mediaType": "image/png"
   },
   {
-    "sourceFile": "executor-workshop.png",
-    "uuidFile": "8f16e7f7-cdd8-44c1-bd00-5efe4e12b0a6.png",
-    "sha256": "29db0d7bff5f93bc6ea9eb351cd7b097bc71269979ceda3b606d2d6c68018677",
-    "bytes": 2806643,
+    "sourceFile": "characters/bath-attendant-illustrated.webp",
+    "uuidFile": "characters/ab991155-b921-4193-b6fe-d68e24b3ac3b.webp",
+    "sha256": "df6af90ebba586b52733874606f7fd6ff53a4d1488667db89dc50898956ae964",
+    "bytes": 252002,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "characters/bath-attendant.png",
+    "uuidFile": "characters/e56b3d2a-5108-4bb2-b836-266290e0af57.png",
+    "sha256": "228138c1e82c3cf9ab278efec323a90b8bc5920eb4c5d93f85ea738bbb0fd5bc",
+    "bytes": 2265380,
     "mediaType": "image/png"
   },
   {
-    "sourceFile": "jekyll-hyde-lab.png",
-    "uuidFile": "d093d052-dbfe-490e-a6e8-896f58e3b5c7.png",
-    "sha256": "72730fbb9cfeb44175d9333f2bff2250d3e50bd7c7226b784e77127b7469ee38",
-    "bytes": 2738983,
-    "mediaType": "image/png"
-  },
-  {
-    "sourceFile": "loom-carnival.png",
-    "uuidFile": "5f617c29-cebe-496c-b859-0d02ebc487d6.png",
-    "sha256": "4a53ad81e5fafd4613b7904e95b0476aa18e4c23c9489ef5ad5cb732aa3eceee",
-    "bytes": 2962905,
-    "mediaType": "image/png"
-  },
-  {
-    "sourceFile": "memory-cemetery.png",
-    "uuidFile": "004e69ed-0e86-4a11-a25e-529663be2cb8.png",
-    "sha256": "56a31ca3711f6b9b88fff5c85c41e47e1e02562d671d3c5649facf84e855bedf",
-    "bytes": 2723609,
-    "mediaType": "image/png"
-  },
-  {
-    "sourceFile": "mirror-chapel.png",
-    "uuidFile": "5fdd7fc5-1938-42a4-b9fe-eb42cb5216cd.png",
-    "sha256": "175b36ea45dcdc951a838ffc20488909c6087b46f2e5072749fde781c91d1a52",
-    "bytes": 2770864,
-    "mediaType": "image/png"
-  },
-  {
-    "sourceFile": "retry-ledger.png",
-    "uuidFile": "a3b00847-549a-4967-b506-de6e8b470506.png",
-    "sha256": "17f4a9017b585af755800ee4e241db4d950b9ac6ba457ad42492083ec66c95b1",
-    "bytes": 2353070,
-    "mediaType": "image/png"
-  },
-  {
-    "sourceFile": "thread-cathedral.png",
-    "uuidFile": "62f21364-4fcd-49e0-9e49-d6812e678c50.png",
-    "sha256": "ac429290013560d0c87b495ad3200519a185a137c730dd4ac31d51a98165a0fd",
-    "bytes": 2856322,
-    "mediaType": "image/png"
-  },
-  {
-    "sourceFile": "threadvale-manor.png",
-    "uuidFile": "a731b910-abfa-4c23-a863-e4dc7074e62a.png",
-    "sha256": "0bbabe0dcba0f056b71ef2bab2e69e09029142d3a164636c15c95d77651ab6ed",
-    "bytes": 2612408,
-    "mediaType": "image/png"
+    "sourceFile": "characters/edda-vale-illustrated.webp",
+    "uuidFile": "characters/b3483b19-6785-4075-9500-24f09b25263b.webp",
+    "sha256": "3be2d5ba68614dfc54969b42a3689b03944489d9a87b23a7ac739c3bccbe7ad3",
+    "bytes": 204638,
+    "mediaType": "image/webp"
   },
   {
     "sourceFile": "characters/edda-vale.svg",
     "uuidFile": "characters/7bb34c39-536f-4297-af1e-99717501c16f.svg",
-    "sha256": "70bc74cc41fdcc81497b81d873712fc1d8e7df9f481c04197424a0de50538225",
-    "bytes": 2202,
+    "sha256": "a50b6b313b005955a97d9afaa58cf494dae74147b856b2b702b0397821ff6b56",
+    "bytes": 2893,
     "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/hyde-illustrated.webp",
+    "uuidFile": "characters/82dfd2ff-25bb-49f6-96aa-9d49bac0f60e.webp",
+    "sha256": "bcbaa4b00a29447a142662ebdfbd9885e5a52766f05779fd2bc4a18e5f6a513a",
+    "bytes": 238464,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "characters/hyde.svg",
+    "uuidFile": "characters/f089f6ad-d15e-466d-9ac2-a0334391ecf0.svg",
+    "sha256": "f5feb29d3b71b6ac55d3a6887ef4770d2b78eb9e55d93011e354f378e19c4335",
+    "bytes": 1996,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/jekyll-illustrated.webp",
+    "uuidFile": "characters/23fe68db-7024-4ce6-9069-0c66edf358fc.webp",
+    "sha256": "527e9cda7096d463ea0a34ad68a2a339d441969c8f290cc29cda610f188d7da0",
+    "bytes": 216074,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "characters/jekyll.svg",
+    "uuidFile": "characters/2968fbb0-52af-4f32-813d-7c98a5eaa8af.svg",
+    "sha256": "3951a43991e53ce7ba35754dcc90f384bab02a8198c19a615e6794e086dd5192",
+    "bytes": 1747,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/memory-reaper-illustrated.webp",
+    "uuidFile": "characters/aff63aaf-170d-46dd-a2cf-8e56eafd1a8b.webp",
+    "sha256": "e9d32e231517e54287d4aa538a9ee236b2d87f6df3da6a0201199d19ce9d576a",
+    "bytes": 213862,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "characters/memory-reaper.svg",
+    "uuidFile": "characters/4be9b3af-4529-49d9-8f9b-37f2f922d1c6.svg",
+    "sha256": "dd256aea15e37c08a2743695b03041ca1f1d38cb7e0b9274e188ba05c3ac97b1",
+    "bytes": 1872,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/mirror-twins-illustrated.webp",
+    "uuidFile": "characters/e67e9310-65e9-44b6-858a-1a12d5eae6bc.webp",
+    "sha256": "c9fc218bc11f907b83e7798a4edbf946b48c2af00baea89d370837bd2bd78300",
+    "bytes": 209042,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "characters/mirror-twins.svg",
+    "uuidFile": "characters/a6bacf53-a74b-45fa-803a-6e21f4d1c777.svg",
+    "sha256": "4096b76aa6a6ee9d68466a3c6428e3c18eacd175038ea227a891ce2544cdaa96",
+    "bytes": 1988,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/pip-lantern-mouse-illustrated.webp",
+    "uuidFile": "characters/c89560f6-3b63-4182-82d0-bb32668485f1.webp",
+    "sha256": "2ec3039a077ed1a176b18ca86fc51f709af57b2b743013838dee522c777418ef",
+    "bytes": 188180,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "characters/pip-lantern-mouse.svg",
+    "uuidFile": "characters/8cd134c0-cbc5-4543-b610-eef1bd91cc33.svg",
+    "sha256": "9d80905c357390a76d80535a20837f8f73feb35db6b7d167d239fbe9456586ea",
+    "bytes": 2163,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/retry-accountant-illustrated.webp",
+    "uuidFile": "characters/4050dc78-580a-42c6-80eb-93c0c7ad3e1f.webp",
+    "sha256": "bd05acaf88f6f97b6bf712aa5b80a0e5d5e8ffa090f59bca58f39b50e845b17e",
+    "bytes": 220490,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "characters/retry-accountant.svg",
+    "uuidFile": "characters/836d3ee9-d64d-46ca-b09b-e8e90fac522a.svg",
+    "sha256": "bd3b24cebf374bbd96ff4541b26058f407bb5fe432fecccc16af3ef59a1e307a",
+    "bytes": 1941,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/role-architect-illustrated.webp",
+    "uuidFile": "characters/fba8e7da-7402-44f0-a4a2-4c7ae8510922.webp",
+    "sha256": "2034a5ef8de4b990bbe972227c97cd96ca336973fceefe1fc8d9d1b8f7a1df54",
+    "bytes": 210088,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "characters/role-architect.svg",
+    "uuidFile": "characters/cd98ace2-11f4-4987-b147-e3721a1034b4.svg",
+    "sha256": "d0db980f2105044b3752c212460125bd3ef9470686398527f01703b218108daf",
+    "bytes": 1765,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/role-junior-illustrated.webp",
+    "uuidFile": "characters/20aab3e1-cfb4-44d1-8f4c-c7c5d8bffd16.webp",
+    "sha256": "e33605b0101faf4627535e16eb392125b50d72f0a275d735b47ea713532faf86",
+    "bytes": 229738,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "characters/role-junior.svg",
+    "uuidFile": "characters/23e8a830-cf11-456c-b777-d04eb1e38b03.svg",
+    "sha256": "7f6c49bba39b08be76bd43e4d69e09243315a7f07a04d8a948ce4f6f485366a4",
+    "bytes": 1603,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/role-senior-illustrated.webp",
+    "uuidFile": "characters/ba78c28f-996c-495a-8ac3-a3f0df72eef0.webp",
+    "sha256": "c8f89f1859ed893d46770bcaa4673d5e1bfb0bcc4c2aed7df0062c6e6ecc8f1e",
+    "bytes": 195312,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "characters/role-senior.svg",
+    "uuidFile": "characters/2e67346b-0b9e-4f13-b6d9-d2d4e3798049.svg",
+    "sha256": "84d624e3dc6d3f923ee1bcf7d43cc5624c8a95bb141d137b849a96a3e4e3cbf2",
+    "bytes": 1635,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/sister-semaphore-illustrated.webp",
+    "uuidFile": "characters/9c67cbb0-8952-4091-8d72-be931512dd6f.webp",
+    "sha256": "9b086c72e4024ffa64fc9bd49d8b5f1b33dec0481d25a5ff55800dbf446af687",
+    "bytes": 245610,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "characters/sister-semaphore.svg",
+    "uuidFile": "characters/bda73f5d-6b1e-4e34-b1fa-686401c38a5d.svg",
+    "sha256": "141b6c97e059799891209b62a20cbcb66dbc504ff7df75507d4270a4684f7277",
+    "bytes": 1880,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/tangle-wraith-illustrated.webp",
+    "uuidFile": "characters/7000d8e9-e7a4-40fd-b150-9447a06fd99e.webp",
+    "sha256": "7dd1a8fb80b6ccf440951f1527e005bc8b85b3a38067c1a8c2656b1dc422a17f",
+    "bytes": 275324,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "characters/tangle-wraith.svg",
+    "uuidFile": "characters/3cee6866-8e00-49a9-8163-57a3f5360f26.svg",
+    "sha256": "7dc91b4d4436a35afaaf8eae4f5724b8ff7d266b23dbe2b1d211992eda550986",
+    "bytes": 2143,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/vee-virtual-thread-illustrated.webp",
+    "uuidFile": "characters/8e2c0cd5-2894-44f5-a2a7-d6b45b615460.webp",
+    "sha256": "3955a560958cffa219e193e65c2e60844b97dcb9c9a22506e12426cb9c164b4a",
+    "bytes": 211094,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "characters/vee-virtual-thread.svg",
+    "uuidFile": "characters/cc5e6292-b51c-4682-a489-f5c66494188d.svg",
+    "sha256": "0515f3a7cbbf398533f93cb5f1ec15f341dadf6254a972aaec78c648622c2ad0",
+    "bytes": 2064,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "characters/warden-pid-illustrated.webp",
+    "uuidFile": "characters/a5f6c071-0df6-46b4-a364-c5e0f29c933f.webp",
+    "sha256": "0a0b9d7384b02533f12d3618bd95c2ea70d2c5a51e52426aa4f3624d61567e78",
+    "bytes": 206368,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "characters/warden-pid.svg",
+    "uuidFile": "characters/5118fac0-e6d1-4ec1-86a7-7185e0922b5d.svg",
+    "sha256": "ffc9a428f7774e8e523ef18a2be6e11cb97ccaed20dcf87cecc46b1a71a1ed36",
+    "bytes": 2028,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "clocktower-attic.webp",
+    "uuidFile": "e3d5540b-8911-4c0c-a2f9-825c968ab1d3.webp",
+    "sha256": "ffe2abc2eb8274c5bf1ee635e9b98050dc9658f09f9f242551c27261e029b4eb",
+    "bytes": 405166,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "condition-room.webp",
+    "uuidFile": "913a82bc-b1f6-47e9-9303-73c98f629924.webp",
+    "sha256": "d5227df58d7a55898e1ee4b00701f285c5d96a7951d12f0accc6d371ff812037",
+    "bytes": 355808,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "dead-orchard.webp",
+    "uuidFile": "0c50ca4f-6f8f-4543-a8b3-7de008669f9b.webp",
+    "sha256": "6175a55fa245ba05b0f10bf24dd9b22b36b7d2cd28f7a9fbaa8c5fe081d3fcf8",
+    "bytes": 424936,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "executor-workshop.webp",
+    "uuidFile": "8f16e7f7-cdd8-44c1-bd00-5efe4e12b0a6.webp",
+    "sha256": "a432371f410d1aa59fe860427c1a55957379ce786a9b1b806bb5f508bdcfb90a",
+    "bytes": 496238,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "haunted-greenhouse.webp",
+    "uuidFile": "140f7afc-c38b-4a8d-acc6-a0a5d131b742.webp",
+    "sha256": "6bd5f8fe3fc6bb61f491464b1023f85e4e17ea52f721bffc3787a00fd6bfb5f3",
+    "bytes": 509344,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "jekyll-hyde-lab.webp",
+    "uuidFile": "d093d052-dbfe-490e-a6e8-896f58e3b5c7.webp",
+    "sha256": "86ea3739858303e4dcbb45edde02dc1ddf56cc81f9ab4a78f29ca1e0ec4ec9a2",
+    "bytes": 489882,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "library-archive.webp",
+    "uuidFile": "bc179a42-4ba6-4a8e-8bbf-944f12b70672.webp",
+    "sha256": "7e32f7cc4da3cc3680336895cd98906e06a8cbf83627c2ae39afcf8e84881dd5",
+    "bytes": 343290,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "loom-carnival.webp",
+    "uuidFile": "5f617c29-cebe-496c-b859-0d02ebc487d6.webp",
+    "sha256": "1e325d5612124cb49fc1b6fe028e815f0943d891cd3ec2cc24970c0eaf03a031",
+    "bytes": 509532,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "memory-cemetery.webp",
+    "uuidFile": "004e69ed-0e86-4a11-a25e-529663be2cb8.webp",
+    "sha256": "fa584d03580726640e4a0dc18f64c6375fd221a9d0c0f8fc0d27beaadaaec368",
+    "bytes": 452766,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "mirror-chapel.webp",
+    "uuidFile": "5fdd7fc5-1938-42a4-b9fe-eb42cb5216cd.webp",
+    "sha256": "b93f0729caa5cb067a807e134c17b8d237df78d96435c16528d68dc21b16fc15",
+    "bytes": 443448,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "moonlit-courtyard.webp",
+    "uuidFile": "c1a188d8-3235-4941-a506-0d88dacacc2d.webp",
+    "sha256": "532ed1f486bc2bfaafbc504b168d15a1c63efa5995ed13e0917e7aca80e9745d",
+    "bytes": 544702,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "props/carnival-hatch.webp",
+    "uuidFile": "props/e5cd0d52-6847-4157-b953-14e0051dd72e.webp",
+    "sha256": "56f7310f192224d40a8d670248b80c25d1c1a204256b5d0e88f5fb4d12f92f95",
+    "bytes": 334208,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "props/courier-handcart.webp",
+    "uuidFile": "props/3bce8b07-79cf-460f-8d08-7905884068e9.webp",
+    "sha256": "d928aed85de133c49c4a90a9122d0782946c2aebf40f676ff6cd958755d7cab0",
+    "bytes": 250668,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "props/front-hall-chair.webp",
+    "uuidFile": "props/a7f2fb0e-d8a8-4e62-9669-601e79ee479d.webp",
+    "sha256": "15efe7657827211a911f42db37c63659635d7f7eb73ffadcc5f3190d3d7bf652",
+    "bytes": 279668,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "props/gallery-bell-rope.webp",
+    "uuidFile": "props/8de60f26-0eca-4c3c-bb16-1c520d4485f3.webp",
+    "sha256": "690105e158f5f74b6695608d37c168e38afe3d62340769777cb0b499e6775a9b",
+    "bytes": 174368,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "props/grave-marker.webp",
+    "uuidFile": "props/6762aab1-0401-4dba-a53b-b8b6986a0848.webp",
+    "sha256": "32341f40f89d6778c8c04749517e3af03a60718da4b5cc9757fcab947c16d319",
+    "bytes": 375606,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "props/intro-haunted-pumpkin-right.webp",
+    "uuidFile": "props/f2b980ca-6b41-4c67-9cc3-14c8764fa6c1.webp",
+    "sha256": "922bdb0a96675b19870fc846b4d09c4dc4cd447029f58d4da7493f0e81b4c603",
+    "bytes": 379638,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "props/intro-haunted-pumpkin-tall.webp",
+    "uuidFile": "props/56138b9b-9b34-455a-903e-f8cff780d8bb.webp",
+    "sha256": "7cb14064f0e3ae70ad3a6b667f3c8773615cc966d912e9f3f0302157a39c530d",
+    "bytes": 331942,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "props/intro-haunted-pumpkin-wide.webp",
+    "uuidFile": "props/1c951beb-b595-4fc2-868f-18f0c3475bc2.webp",
+    "sha256": "f9620afb0be698148725d6d6b98e251d67b2c00be3944b9bf83566d848d423eb",
+    "bytes": 451768,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "props/intro-jack-o-lantern.svg",
+    "uuidFile": "props/1f52b778-966a-4bac-9144-c15f5efc5b33.svg",
+    "sha256": "d96e7fe7ff39362eed1fc40cb31696bb46e8c437bc97088727b187430ad81b32",
+    "bytes": 6743,
+    "mediaType": "image/svg+xml"
+  },
+  {
+    "sourceFile": "props/jekyll-cart.webp",
+    "uuidFile": "props/e148a0e0-4083-4baf-97b8-6b5882bd75cd.webp",
+    "sha256": "e2d9b974d5269ce0bcd215dd93e19a1b112b4d73284091d93573068833001c7d",
+    "bytes": 469212,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "props/mirror-curtain.webp",
+    "uuidFile": "props/fe6ee59b-e24c-4083-884c-0474f24feac9.webp",
+    "sha256": "e14059df942d1bd6529fe753b41eb54295ff4ad985e78637252bea965785d199",
+    "bytes": 237034,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "props/pantry-door.webp",
+    "uuidFile": "props/f01fd045-ff0a-41ce-bc7c-155e24cb9311.webp",
+    "sha256": "587cc70f57a2539993ae4fa979d58d09397b1f46745e8e3bd5cb42a54908ccd2",
+    "bytes": 261802,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "props/worker-crate.webp",
+    "uuidFile": "props/4806ba40-a99f-48d2-a58e-90b4f686f123.webp",
+    "sha256": "67136541b75c4457c91b65c3597f738e91d030933d93a4029d33ea288783085c",
+    "bytes": 273172,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "retry-ledger.webp",
+    "uuidFile": "a3b00847-549a-4967-b506-de6e8b470506.webp",
+    "sha256": "d183bd30ebf92b9e72ae943566cd04b0b63cb85428122359ce92f351e10fecf5",
+    "bytes": 362196,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "steam-bathroom.webp",
+    "uuidFile": "c52a8ded-2674-4937-a689-f886aaf2f2c7.webp",
+    "sha256": "f20d04b08d8daa32054a9771afb9414e48ef510caf87bcb9acbd3e08c7d10950",
+    "bytes": 276654,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "thread-cathedral.webp",
+    "uuidFile": "62f21364-4fcd-49e0-9e49-d6812e678c50.webp",
+    "sha256": "9c72cfe99401f7a5286b01885c1cccda960fd8d16d6f4aade2a88110a667f739",
+    "bytes": 487958,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "threadvale-manor.webp",
+    "uuidFile": "a731b910-abfa-4c23-a863-e4dc7074e62a.webp",
+    "sha256": "7f7e3eb51db4457f819d51de2f4a2213c4b64e9e1babaaa5678c2b8c216c1cb0",
+    "bytes": 417666,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "threadvale-outer-gates.webp",
+    "uuidFile": "83923b5a-2248-4af6-9c2e-869d5bca9bca.webp",
+    "sha256": "c6527198bf1a0314160f7acf228810c0abc4d4df089c91748fda42ed3630f16b",
+    "bytes": 415846,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "ui/intro-blood-lettering.webp",
+    "uuidFile": "ui/d02200a7-52d0-4e5f-99e9-37e40c8f113e.webp",
+    "sha256": "31105ec32c29a1a52c9523ae5c7916383e251d348a8e4bf4b07e410f44f04272",
+    "bytes": 682608,
+    "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "uncounted-choir.webp",
+    "uuidFile": "characters/22f3bc8a-7f31-4816-ac22-91c09956633a.webp",
+    "sha256": "6403474a42cc24cd08df5ab080b22bf327f13a1e2b3991f39d08c4b1783cfcb9",
+    "bytes": 491954,
+    "mediaType": "image/webp"
   }
 ]
