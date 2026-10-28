@@ -752,6 +752,58 @@ html,body{width:100%;height:100dvh;min-height:0;max-height:100dvh;overflow:hidde
 .map-plan-room{pointer-events:none}.map-plan-building{fill:#d2bd91;stroke:#765b39;stroke-width:4}.map-plan-grounds{fill:#c9bd8e;stroke:#8c7851;stroke-width:2}.map-plan-title{fill:#725331;text-anchor:middle;font:900 11px var(--sans);letter-spacing:2px}.map-plan-floor{fill:#e9d9b0;stroke:#826844;stroke-width:2}.map-plan-inset{fill:none;stroke:#b49a69;stroke-width:1;opacity:.8}.map-plan-room.interior .map-plan-floor{fill:#d9c49b}.map-plan-room.great-hall .map-plan-floor{fill:#e7d3a3;stroke:#9b6c3f;stroke-width:3}.map-plan-furnishing{fill:#9f7e52;stroke:#745632;stroke-width:1.5;opacity:.78}.map-plan-furnishing line{fill:none;stroke:#e8d6aa;stroke-width:1}.map-plan-tree{opacity:.82}.map-plan-tree circle{fill:#70805a;stroke:#566344;stroke-width:1.5}.map-plan-tree .map-plan-tree-light{fill:#89956a;stroke:none}.map-corridor-wall{fill:none;stroke:#987d50;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;opacity:.48}.map-corridor{fill:none;stroke:#f0dfb7;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;opacity:.9}.map-route{stroke:#8e7044;stroke-width:2.5;stroke-dasharray:3 7;opacity:.7}.map-route.open{stroke:#725532;stroke-width:3.5;stroke-dasharray:none;opacity:.8}.map-route.solved{stroke:#60714b;opacity:.95}.map-route.related{stroke:#a34855;stroke-width:5;opacity:1;filter:url(#mapGlow)}.map-room-pin.related rect{stroke:#a34855;stroke-width:4;filter:drop-shadow(0 0 9px #a3485599)}
 @media(max-width:760px){.estate-map-frame>svg{min-width:900px}.map-plan-title{font-size:10px}}
 </style>
+<style id="fixed-centered-top-hud-tab">
+#game:not([hidden])>.topbar{z-index:40;transform:translateY(calc(-100% + 15px));transition:transform .42s cubic-bezier(.18,.78,.22,1),box-shadow .3s ease}
+#game:not([hidden])>.topbar:hover,#game:not([hidden])>.topbar:focus-within,#game:not([hidden]):has(>.top-hud-handle:hover)>.topbar,#game:not([hidden]):has(>.top-hud-handle:focus-visible)>.topbar{transform:translateY(0);box-shadow:0 12px 30px #08040bcc}
+#game:not([hidden]):has(>.top-hud-handle:hover)>.topbar>*,#game:not([hidden]):has(>.top-hud-handle:focus-visible)>.topbar>*{visibility:visible}
+#game:not([hidden])>.topbar:not(:hover):not(:focus-within)>:not(.top-hud-handle){visibility:hidden}
+#game:not([hidden])>.top-hud-handle{position:fixed;top:0;left:50vw;bottom:auto;z-index:50;width:92px;height:16px;transform:translateX(-50%);border:1px solid #a88259;border-top:0;border-radius:0 0 12px 12px;background:linear-gradient(180deg,#211621,#58342f 74%,#bd8050);box-shadow:0 4px 14px #100914cc;transition:filter .2s ease,background .25s ease}
+#game:not([hidden])>.top-hud-handle::before{width:38px;height:3px}
+#game:not([hidden])>.top-hud-handle:hover,#game:not([hidden])>.top-hud-handle:focus-visible{filter:brightness(1.25);outline:2px solid #f4cb7a;outline-offset:2px}
+#game:not([hidden])>.top-hud-handle[aria-expanded="true"]{background:linear-gradient(180deg,#372038,#755043 74%,#e0ac60)}
+.bottom-hud-handle{width:92px;height:16px}
+.bottom-hud-handle::before{width:38px;height:3px}
+@media(hover:none),(pointer:coarse){#game:not([hidden])>.topbar{transform:translateY(0)}#game:not([hidden])>.topbar>*{visibility:visible}#game:not([hidden])>.top-hud-handle{display:none}}
+@media(prefers-reduced-motion:reduce){#game:not([hidden])>.topbar,#game:not([hidden])>.top-hud-handle{transition:none}}
+</style>
+<style id="architectural-floorplan-polish">
+.map-plan-building{fill:#796849;stroke:#30241d;stroke-width:8;filter:drop-shadow(0 7px 6px #49372255)}
+.map-plan-grounds{fill:#bfc39a;stroke:#76704d;stroke-width:2}
+.map-plan-title{fill:#fff0c5;text-anchor:middle;font:900 11px var(--sans);letter-spacing:2.2px;text-shadow:0 1px 2px #33271d}
+.map-plan-hall{fill:#b9a77e;stroke:#826d49;stroke-width:1.2}
+.map-plan-hall-center{fill:none;stroke:#e9dbb3;stroke-width:2;stroke-dasharray:2 9;opacity:.56}
+.map-plan-floor{fill:#efe0ba;stroke:#35271f;stroke-width:4;filter:drop-shadow(0 2px 1px #4a38265e)}
+.map-plan-inset{fill:none;stroke:#b59b6e;stroke-width:1.3}
+.map-plan-room.interior .map-plan-floor{fill:#ead9b2}
+.map-plan-room.great-hall .map-plan-floor{fill:#f1dfae;stroke:#493228;stroke-width:5}
+.map-plan-room.exterior .map-plan-floor{fill:#d8d0a0;stroke:#686244;stroke-width:2}
+.map-plan-furnishing{fill:#ad8c5d;stroke:#61472f;stroke-width:1.5;opacity:.92}
+.map-plan-furnishing line{fill:none;stroke:#634c32;stroke-width:1.5}
+.map-plan-furnishing circle{fill:#d7c38e;stroke:#695134;stroke-width:1.6}
+.map-plan-door-gap{fill:none;stroke:#b9a77e;stroke-width:6;stroke-linecap:round}
+.map-plan-door-swing{fill:none;stroke:#654d31;stroke-width:1.5;opacity:.9}
+.map-plan-tree circle{fill:#7d8a5c;stroke:#536143;stroke-width:1.4}
+.map-plan-tree .map-plan-tree-light{fill:#aab17a;stroke:none}
+.map-plan-walk-shadow{fill:none;stroke:#7e6c49;stroke-width:24;stroke-linecap:round;stroke-linejoin:round;opacity:.55}
+.map-plan-walk{fill:none;stroke:#dbc79b;stroke-width:17;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2 10;opacity:.9}
+.map-plan-zone-label{fill:#6b6544;text-anchor:middle;font:900 9px var(--sans);letter-spacing:1.8px}
+.map-corridor-wall{fill:none;stroke:#57442f;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;opacity:.16}
+.map-corridor{fill:none;stroke:#f0dfb7;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;opacity:.48}
+.map-route{fill:none;stroke:#8e7044;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2 5;opacity:.62;transition:stroke .16s,opacity .16s,stroke-width .16s}
+.map-route.open{stroke:#64794d;stroke-width:2;stroke-dasharray:none;opacity:.78}
+.map-route.solved{stroke:#4f805f;opacity:.9}
+.map-route.related{stroke:#b54e51;stroke-width:4;stroke-dasharray:none;opacity:.98;filter:url(#mapGlow)}
+.map-follow-path{stroke:#a34855;stroke-width:4;stroke-dasharray:2 8;opacity:0;filter:url(#mapGlow)}
+.map-follow-path.active{opacity:.86}
+.map-room-pin rect{fill:#f6e9c7e0;stroke:#75593b;stroke-width:1.5;filter:drop-shadow(0 2px 2px #44321e55)}
+.map-room-pin text{font-size:10px}
+.map-room-pin .map-room-state{font-size:8.5px;letter-spacing:.035em}
+.map-room-pin.current rect{fill:#ffe0a0;stroke:#a23d43;stroke-width:3}
+.map-room-pin.open rect{fill:#edf0d3;stroke:#738455}
+.map-room-pin.locked rect{fill:#d7c7a7;stroke:#7b6a51;stroke-dasharray:3 3;opacity:.96}
+.map-room-pin.related rect{stroke:#b54e51;stroke-width:3;filter:drop-shadow(0 0 8px #aa4a4d88)}
+@media(max-width:820px){.map-plan-building{stroke-width:5}.map-plan-title{font-size:9px;letter-spacing:1.4px}.map-room-pin text{font-size:9.5px}.map-room-pin .map-room-state{font-size:8px}}
+</style>
 </head>
 <body>
 <section id="intro" data-stage="title" aria-label="Threadvale Manor opening sequence">
@@ -815,7 +867,6 @@ html,body{width:100%;height:100dvh;min-height:0;max-height:100dvh;overflow:hidde
 <main id="game" hidden>
  <div id="gameTransitionCurtain" aria-hidden="true" hidden></div>
  <header class="topbar">
-  <button type="button" class="hud-reveal-handle top-hud-handle" aria-label="Show game controls" aria-controls="gameControls" aria-expanded="false"></button>
   <div class="brand"><span class="brand-mark" aria-hidden="true">🕯️</span><div><b>Threadvale Manor</b><small>The PySpark after-hours investigation</small></div></div>
   <div class="top-actions" id="gameControls">
    <button class="icon-button role-chip" id="roleButton" title="Change your learning role"><img id="roleIcon" alt=""><span id="roleLabel">Junior</span></button>
@@ -828,6 +879,7 @@ html,body{width:100%;height:100dvh;min-height:0;max-height:100dvh;overflow:hidde
   </div>
   <span class="sound-status" id="trackLabel" aria-live="polite">Museum Main Theme</span>
  </header>
+ <button type="button" class="hud-reveal-handle top-hud-handle" aria-label="Show game controls" aria-controls="gameControls" aria-expanded="false"></button>
  <div class="scene-nav" hidden><button class="icon-button" id="previousRoom" title="Previous open room">← Room</button><nav id="progressStrip" class="progress-strip" aria-label="Open rooms"></nav><button class="icon-button" id="nextRoom" title="Next open room">Room →</button></div><p class="room-nav-hint">✦ Follow the demon-fire arrows over the illustration to travel. Open the field grimoire for the full map.</p>
  <div class="layout">
   <section class="scene-shell" aria-labelledby="roomTitle">
@@ -2037,18 +2089,121 @@ function mapSvg(tag,attrs){const node=document.createElementNS("http://www.w3.or
 function mapAvailableCharacters(){return MAP_CHARACTERS.filter(function(c){const home=CHAPTERS.find(function(ch){return ch.id===c.home});return canVisitRoom(home)&&(!c.afterSolved||!!S.solved[c.afterSolved])})}
 function mapLabelLines(label){if(label.length<=13)return [label];const words=label.split(" "),lines=["",""];words.forEach(function(word){const at=lines[0].length<=lines[1].length?0:1;lines[at]=(lines[at]?lines[at]+" ":"")+word});return lines}
 function mapLockedReason(id){const required=WORLD_REQUIREMENTS[id]||[],sources=required.length?required:CHAPTERS.filter(function(parent){return (WORLD_ROUTES[parent.id]||[]).includes(id)}).map(function(parent){return parent.id});const names=sources.map(function(source){const ch=CHAPTERS.find(function(item){return item.id===source});return ch?ch.room:source});return names.length?"This door is sealed. Solve the clue-gate in "+names.join(required.length?" and ":" or ")+" to wake the ink lock.":"The page is sealed. Find its clue in the house first."}
-function renderMapFloorplan(){const svg=byId("estateMapSvg");let root=byId("mapFloorplan");if(!root){root=mapSvg("g",{id:"mapFloorplan","aria-hidden":"true"});svg.insertBefore(root,byId("mapRoutes"))}root.replaceChildren();root.append(mapSvg("rect",{x:17,y:26,width:926,height:443,rx:5,class:"map-plan-building"}),mapSvg("rect",{x:18,y:470,width:924,height:140,rx:4,class:"map-plan-grounds"}));const estateName=mapSvg("text",{x:480,y:21,class:"map-plan-title"});estateName.textContent="THREADVALE MANOR · FLOOR PLAN & GROUNDS";root.appendChild(estateName);const interiors=new Set(["library","gallery","clocktower","twins","laboratory","manor","condition","workers","boiler","bathroom","retry"]);CHAPTERS.filter(function(ch){return MAP_POINTS[ch.id]}).forEach(function(ch){const p=MAP_POINTS[ch.id],inside=interiors.has(ch.id),w=inside?218:(p.y>530?170:178),h=inside?(ch.id==="retry"?88:100):(p.y>530?50:66),room=mapSvg("g",{class:"map-plan-room "+(inside?"interior":"exterior")+(ch.id==="manor"?" great-hall":""),"data-plan-room":ch.id});room.append(mapSvg("rect",{x:p.x-w/2,y:p.y-h/2,width:w,height:h,rx:inside?2:9,class:"map-plan-floor"}),mapSvg("rect",{x:p.x-w/2+5,y:p.y-h/2+5,width:w-10,height:h-10,rx:inside?1:6,class:"map-plan-inset"}));if(inside){const furn=mapSvg("g",{class:"map-plan-furnishing"}),x=p.x-w/2+15,y=p.y-h/2+15;furn.append(mapSvg("rect",{x:x,y:y,width:14,height:29,rx:2}),mapSvg("line",{x1:x+3,y1:y+8,x2:x+11,y2:y+8}),mapSvg("line",{x1:x+3,y1:y+15,x2:x+11,y2:y+15}),mapSvg("line",{x1:x+3,y1:y+22,x2:x+11,y2:y+22}),mapSvg("rect",{x:p.x+w/2-29,y:y+4,width:14,height:24,rx:7}),mapSvg("line",{x1:p.x+w/2-26,y1:y+12,x2:p.x+w/2-18,y2:y+12}),mapSvg("line",{x1:p.x+w/2-26,y1:y+19,x2:p.x+w/2-18,y2:y+19}));room.appendChild(furn)}else{const trees=mapSvg("g",{class:"map-plan-tree"});[-1,1].forEach(function(side){const x=p.x+side*(w/2-17);trees.append(mapSvg("circle",{cx:x,cy:p.y,r:9}),mapSvg("circle",{cx:x-4,cy:p.y-4,r:5,class:"map-plan-tree-light"}))});room.appendChild(trees)}const label=mapSvg("title",{});label.textContent=(inside?"Mansion room: ":"Estate grounds: ")+(MAP_ROOM_LABELS[ch.id]||ch.room);room.appendChild(label);root.appendChild(room)})}
+const MAP_PLAN_INTERIORS=new Set(["library","gallery","clocktower","twins","laboratory","manor","condition","workers","boiler","service-passage","bathroom","north-stairwell","retry"]);
+function mapPlanInteriorPath(fromId,toId){
+ const a=MAP_POINTS[fromId],b=MAP_POINTS[toId];if(!a||!b)return[];if(fromId===toId)return[{x:a.x,y:a.y}];
+ const colA=Math.max(0,Math.min(3,Math.round((a.x-125)/225))),colB=Math.max(0,Math.min(3,Math.round((b.x-125)/225))),sameColumn=colA===colB;
+ const sideA=sameColumn?(colA<3?1:-1):(colB>colA?1:-1),sideB=sameColumn?sideA:(colB>colA?-1:1),doorA={x:a.x+sideA*101,y:a.y},doorB={x:b.x+sideB*101,y:b.y},hallA=a.x+sideA*112.5,hallB=b.x+sideB*112.5;
+ if(sameColumn)return[doorA,{x:hallA,y:a.y},{x:hallB,y:b.y},doorB];
+ const rows=[148,263,372],mid=(a.y+b.y)/2,hallY=rows.reduce(function(best,y){return Math.abs(y-mid)<Math.abs(best-mid)?y:best},rows[0]);
+ return[doorA,{x:hallA,y:a.y},{x:hallA,y:hallY},{x:hallB,y:hallY},{x:hallB,y:b.y},doorB];
+}
+function mapPlanGardenPath(fromId,toId){
+ const a=MAP_POINTS[fromId],b=MAP_POINTS[toId];if(!a||!b)return[];if(fromId===toId)return[{x:a.x,y:a.y}];
+ const pathY=530;return[{x:a.x,y:a.y},{x:a.x,y:pathY},{x:b.x,y:pathY},{x:b.x,y:b.y}];
+}
+function mapPlanRoutePoints(fromId,toId){
+ const a=MAP_POINTS[fromId],b=MAP_POINTS[toId];if(!a||!b)return[];
+ const aInside=MAP_PLAN_INTERIORS.has(fromId),bInside=MAP_PLAN_INTERIORS.has(toId);
+ if(aInside&&bInside)return mapPlanInteriorPath(fromId,toId);
+ if(!aInside&&!bInside)return mapPlanGardenPath(fromId,toId);
+ if(!aInside)return mapPlanRoutePoints(toId,fromId).reverse();
+ const outsideId=toId,hubId=MAP_POINTS["service-passage"]?"service-passage":"manor",hub=MAP_POINTS[hubId];
+ const toHub=fromId===hubId?[{x:hub.x,y:hub.y}]:mapPlanInteriorPath(fromId,hubId),entry=[{x:hub.x,y:hub.y},{x:350,y:372},{x:350,y:463},{x:350,y:500}],garden=mapPlanGardenPath("courtyard",outsideId);
+ const departure=fromId===hubId?entry.slice(1):entry;
+ return toHub.concat(departure,garden.slice(1));
+}
+function mapPlanPointAt(points,t){
+ if(!points||!points.length)return{x:0,y:0};if(points.length===1)return{x:points[0].x,y:points[0].y};
+ let total=0;for(let i=1;i<points.length;i++)total+=Math.hypot(points[i].x-points[i-1].x,points[i].y-points[i-1].y);
+ if(!total)return{x:points[0].x,y:points[0].y};let remaining=Math.max(0,Math.min(1,t))*total;
+ for(let i=1;i<points.length;i++){const a=points[i-1],b=points[i],length=Math.hypot(b.x-a.x,b.y-a.y);if(remaining<=length){const part=length?remaining/length:0;return{x:a.x+(b.x-a.x)*part,y:a.y+(b.y-a.y)*part}}remaining-=length}
+ return{x:points[points.length-1].x,y:points[points.length-1].y};
+}
+function drawMapPlanDoor(room,p,w,h,side){
+ let x,y,d,attrs;
+ if(side==="left"){x=p.x-w/2;y=p.y;d="M"+x+" "+(y-9)+" A12 12 0 0 1 "+(x+12)+" "+(y+3);attrs={x1:x,y1:y-9,x2:x,y2:y+9}}
+ else if(side==="right"){x=p.x+w/2;y=p.y;d="M"+x+" "+(y-9)+" A12 12 0 0 0 "+(x-12)+" "+(y+3);attrs={x1:x,y1:y-9,x2:x,y2:y+9}}
+ else{x=p.x;y=p.y+h/2;d="M"+(x-9)+" "+y+" A12 12 0 0 0 "+(x+3)+" "+(y-12);attrs={x1:x-9,y1:y,x2:x+9,y2:y}}
+ room.append(mapSvg("line",Object.assign({},attrs,{class:"map-plan-door-gap"})),mapSvg("path",{d:d,class:"map-plan-door-swing"}));
+}
+function drawMapPlanFurniture(room,ch,p){
+ const fixture=mapSvg("g",{class:"map-plan-furnishing map-plan-fixture-"+ch.id}),left=p.x-88,right=p.x+70,y=p.y;
+ const rect=function(x,yy,width,height,rx){return mapSvg("rect",{x:x,y:yy,width:width,height:height,rx:rx||1})},line=function(x1,y1,x2,y2){return mapSvg("line",{x1:x1,y1:y1,x2:x2,y2:y2})},circle=function(x,y,r){return mapSvg("circle",{cx:x,cy:y,r:r})};
+ if(ch.id==="library"||ch.id==="service-passage"){fixture.append(rect(left,y-22,18,44,2),line(left+5,y-20,left+5,y+20),line(left+12,y-20,left+12,y+20),line(left,y-8,left+18,y-8),line(left,y+7,left+18,y+7))}
+ else if(ch.id==="gallery"){[-18,0,18].forEach(function(offset){fixture.append(rect(left+offset/2,y-14,13,24,1))})}
+ else if(ch.id==="manor"||ch.id==="north-stairwell"){for(let i=0;i<6;i++)fixture.append(line(right,y-23+i*8,right+22-i*2,y-23+i*8));fixture.append(line(right,y-23,right,y+17),line(right+22,y-23,right+22,y+17))}
+ else if(ch.id==="laboratory"||ch.id==="workers"){fixture.append(rect(left,y+7,35,9,2),line(left+4,y+7,left+4,y+18),line(left+31,y+7,left+31,y+18),circle(right+10,y-11,7),line(right+10,y-4,right+10,y+8))}
+ else if(ch.id==="clocktower"||ch.id==="twins"){fixture.append(circle(right+10,y,17),circle(right+10,y,12),line(right+10,y,right+10,y-8),line(right+10,y,right+7,y+2))}
+ else if(ch.id==="condition"){fixture.append(circle(left+10,y,14),circle(left+10,y,7),line(left+10,y-14,left+10,y+14),circle(right+9,y-10,5),circle(right+9,y+10,5))}
+ else if(ch.id==="boiler"){fixture.append(circle(left+10,y,17),circle(left+10,y,11),line(left+10,y-25,left+10,y-17),line(left+5,y-27,left+15,y-27))}
+ else if(ch.id==="bathroom"){fixture.append(rect(left,y-14,34,28,11),line(left+5,y-6,left+29,y-6),circle(right+10,y-9,9))}
+ else if(ch.id==="retry"){fixture.append(circle(left+10,y,17),circle(left+10,y,11),line(left+10,y-20,left+10,y-13),line(left+21,y,left+14,y))}
+ else{fixture.append(rect(left,y-17,18,34,2),line(left+4,y-8,left+14,y-8),line(left+4,y,left+14,y),rect(right,y-13,18,26,2),line(right+4,y-4,right+14,y-4),line(right+4,y+4,right+14,y+4))}
+ room.appendChild(fixture);
+}
+function renderMapFloorplan(){
+ const svg=byId("estateMapSvg");let root=byId("mapFloorplan");
+ if(!root){root=mapSvg("g",{id:"mapFloorplan","aria-hidden":"true"});svg.insertBefore(root,byId("mapRoutes"))}
+ root.replaceChildren();
+ root.append(mapSvg("path",{d:"M18 39Q18 26 31 26H929Q942 26 942 39V455Q942 468 929 468H31Q18 468 18 455Z",class:"map-plan-building"}),mapSvg("rect",{x:18,y:470,width:924,height:140,rx:4,class:"map-plan-grounds"}));
+ const title=mapSvg("text",{x:480,y:21,class:"map-plan-title"});title.textContent="THREADVALE MANOR · FLOOR PLAN & GROUNDS";root.appendChild(title);
+ const halls=mapSvg("g",{class:"map-plan-halls"});
+ [[226.5,40,23,420],[451.5,40,23,420],[676.5,40,23,420],[18,134,924,28],[18,249,924,28],[18,363,924,17],[339,363,22,106]].forEach(function(r){halls.appendChild(mapSvg("rect",{x:r[0],y:r[1],width:r[2],height:r[3],rx:4,class:"map-plan-hall"}))});
+ halls.appendChild(mapSvg("path",{d:"M238 42V458M463 42V458M688 42V458M20 148H940M20 263H940M20 371H940M350 371V468",class:"map-plan-hall-center"}));root.appendChild(halls);
+ const entrance=mapSvg("g",{class:"map-plan-main-entry"});entrance.append(mapSvg("line",{x1:335,y1:468,x2:365,y2:468,class:"map-plan-door-gap"}),mapSvg("path",{d:"M335 468A15 15 0 0 0 350 453M365 468A15 15 0 0 1 350 453",class:"map-plan-door-swing"}));root.appendChild(entrance);
+ const garden=mapSvg("g",{class:"map-plan-garden-walk"}),walk="M52 530H910M350 468V530M480 530V600M740 530V600";garden.append(mapSvg("path",{d:walk,class:"map-plan-walk-shadow"}),mapSvg("path",{d:walk,class:"map-plan-walk"}));root.appendChild(garden);
+ const label=mapSvg("text",{x:820,y:595,class:"map-plan-zone-label"});label.textContent="WALLED GARDENS · SERVICE YARD";root.appendChild(label);
+ CHAPTERS.filter(function(ch){return MAP_POINTS[ch.id]}).forEach(function(ch){
+  const p=MAP_POINTS[ch.id],inside=MAP_PLAN_INTERIORS.has(ch.id),w=inside?202:(p.y>530?142:156),h=inside?(ch.id==="retry"?70:84):(p.y>530?42:48),room=mapSvg("g",{class:"map-plan-room "+(inside?"interior":"exterior")+(ch.id==="manor"?" great-hall":""),"data-plan-room":ch.id});
+  room.append(mapSvg("rect",{x:p.x-w/2,y:p.y-h/2,width:w,height:h,rx:inside?2:8,class:"map-plan-floor"}),mapSvg("rect",{x:p.x-w/2+5,y:p.y-h/2+5,width:w-10,height:h-10,rx:inside?1:5,class:"map-plan-inset"}));
+  if(inside){drawMapPlanFurniture(room,ch,p);drawMapPlanDoor(room,p,w,h,"left");drawMapPlanDoor(room,p,w,h,"right");drawMapPlanDoor(room,p,w,h,"bottom")}
+  else{const trees=mapSvg("g",{class:"map-plan-tree"});[-1,1].forEach(function(side){const x=p.x+side*(w/2-12);trees.append(mapSvg("circle",{cx:x,cy:p.y,r:9}),mapSvg("circle",{cx:x-4,cy:p.y-4,r:5,class:"map-plan-tree-light"}))});room.appendChild(trees)}
+  const roomTitle=mapSvg("title",{});roomTitle.textContent=(inside?"Mansion room: ":"Estate grounds: ")+(MAP_ROOM_LABELS[ch.id]||ch.room);room.appendChild(roomTitle);root.appendChild(room);
+ });
+}
 function bindMapRouteHighlight(){const svg=byId("estateMapSvg");if(svg.dataset.routeHighlightBound)return;svg.dataset.routeHighlightBound="true";function mark(event,on){const pin=event.target.closest&&event.target.closest(".map-room-pin");if(!pin)return;const id=pin.dataset.room;pin.classList.toggle("related",on);svg.querySelectorAll(".map-route[data-from][data-to]").forEach(function(path){const related=path.dataset.from===id||path.dataset.to===id;path.classList.toggle("related",on&&related);const other=path.dataset.from===id?path.dataset.to:path.dataset.from,otherPin=svg.querySelector('.map-room-pin[data-room="'+other+'"]');if(otherPin)otherPin.classList.toggle("related",on&&related)})}svg.addEventListener("pointerover",function(e){mark(e,true)});svg.addEventListener("pointerout",function(e){if(!e.relatedTarget||!e.target.contains(e.relatedTarget))mark(e,false)});svg.addEventListener("focusin",function(e){mark(e,true)});svg.addEventListener("focusout",function(e){if(!e.relatedTarget||!e.target.contains(e.relatedTarget))mark(e,false)})}
-function renderMapRoutes(){const root=byId("mapRoutes");root.replaceChildren();const seen={};let order=0;Object.keys(WORLD_ROUTES).forEach(function(from){(WORLD_ROUTES[from]||[]).forEach(function(to){const key=[from,to].sort().join("|");if(seen[key])return;seen[key]=true;const a=MAP_POINTS[from],b=MAP_POINTS[to];if(!a||!b)return;const dx=b.x-a.x,dy=b.y-a.y,len=Math.max(1,Math.sqrt(dx*dx+dy*dy)),bend=(order++%2?1:-1)*Math.min(22,len*.075),cx=(a.x+b.x)/2-dy/len*bend,cy=(a.y+b.y)/2+dx/len*bend,d="M"+a.x+" "+a.y+" Q"+cx+" "+cy+" "+b.x+" "+b.y,open=canVisitRoom(CHAPTERS.find(function(ch){return ch.id===from}))&&canVisitRoom(CHAPTERS.find(function(ch){return ch.id===to})),state=(open?" open":"")+(S.solved[from]&&S.solved[to]?" solved":"");root.appendChild(mapSvg("path",{d:d,class:"map-corridor-wall"}));root.appendChild(mapSvg("path",{d:d,class:"map-corridor"}));root.appendChild(mapSvg("path",{d:d,class:"map-route"+state,"data-from":from,"data-to":to}))})})}
+function renderMapRoutes(){
+ const root=byId("mapRoutes");root.replaceChildren();const seen={};
+ Object.keys(WORLD_ROUTES).forEach(function(from){(WORLD_ROUTES[from]||[]).forEach(function(to){
+  const key=[from,to].sort().join("|");if(seen[key])return;seen[key]=true;
+  const points=mapPlanRoutePoints(from,to);if(points.length<2)return;
+  const d=points.map(function(p,i){return(i?"L":"M")+p.x+" "+p.y}).join(" "),open=canVisitRoom(CHAPTERS.find(function(ch){return ch.id===from}))&&canVisitRoom(CHAPTERS.find(function(ch){return ch.id===to})),state=(open?" open":"")+(S.solved[from]&&S.solved[to]?" solved":"");
+  root.append(mapSvg("path",{d:d,class:"map-corridor-wall"}),mapSvg("path",{d:d,class:"map-corridor"}),mapSvg("path",{d:d,class:"map-route"+state,"data-from":from,"data-to":to}));
+ })});
+}
 function renderMapRooms(){const root=byId("mapRooms");root.replaceChildren();CHAPTERS.forEach(function(ch){const point=MAP_POINTS[ch.id];if(!point)return;const open=canVisitRoom(ch),done=!!S.solved[ch.id],current=ch.id===chapter().id,pin=mapSvg("g",{class:"map-room-pin "+(current?"current":done?"solved":open?"open":"locked"),role:"button",tabindex:"0","data-room":ch.id,"aria-label":MAP_ROOM_LABELS[ch.id]+(current?", your current room":done?", investigated":open?", open passage":", sealed passage")});const rect=mapSvg("rect",{x:point.x-60,y:point.y-25,width:120,height:50,rx:12});pin.appendChild(rect);const icon=mapSvg("text",{x:point.x-42,y:point.y+6,class:"map-room-icon"});icon.textContent=MAP_ROOM_ICONS[ch.id]||"✦";pin.appendChild(icon);const lines=mapLabelLines(MAP_ROOM_LABELS[ch.id]||ch.room),name=mapSvg("text",{x:point.x+10,y:point.y+(lines.length>1?-5:1)});lines.forEach(function(line,index){const span=mapSvg("tspan",{x:point.x+10,dy:index===0?0:12});span.textContent=line;name.appendChild(span)});pin.appendChild(name);const status=mapSvg("text",{x:point.x,y:point.y+20,class:"map-room-state"});status.textContent=current?"YOU ARE HERE":done?"✦ INVESTIGATED":open?"OPEN · CLICK TO TRAVEL":"✧ SEALED";pin.appendChild(status);const title=mapSvg("title",{});title.textContent=open?"Travel to "+MAP_ROOM_LABELS[ch.id]:mapLockedReason(ch.id);pin.appendChild(title);function choose(){if(canVisitRoom(ch)){travelToRoom(ch.id)}else{byId("mapInkMessage").textContent=mapLockedReason(ch.id)}}pin.addEventListener("click",choose);pin.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();choose()}});root.appendChild(pin)})}
-function mapWalker(c,now,reducedMotion){const route=c.route.filter(function(id){const ch=CHAPTERS.find(function(room){return room.id===id});return !!MAP_POINTS[id]&&canVisitRoom(ch)});if(!route.length)route.push(c.home);const reduced=typeof reducedMotion==="boolean"?reducedMotion:!!(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches),elapsed=Math.max(0,now-(Number(S.mapStartedAt)||now)+(c.phase||0)),step=reduced?0:Math.floor(elapsed/(c.stepMs||13000)),raw=reduced?0:(elapsed%(c.stepMs||13000))/(c.stepMs||13000),t=reduced?0:raw*raw*(3-2*raw),index=step%route.length,from=route[index],to=route[(index+1)%route.length]||from,a=MAP_POINTS[from],b=MAP_POINTS[to];return {x:a.x+(b.x-a.x)*t,y:a.y+(b.y-a.y)*t,room:reduced?from:(raw<.5?from:to),from:from,to:to,index:index,route:route,progress:reduced?0:raw}}
+function mapWalker(c,now,reducedMotion){
+ const route=c.route.filter(function(id){const ch=CHAPTERS.find(function(room){return room.id===id});return !!MAP_POINTS[id]&&canVisitRoom(ch)});
+ if(!route.length)route.push(c.home);
+ const reduced=typeof reducedMotion==="boolean"?reducedMotion:!!(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches),elapsed=Math.max(0,now-(Number(S.mapStartedAt)||now)+(c.phase||0)),step=reduced?0:Math.floor(elapsed/(c.stepMs||13000)),raw=reduced?0:(elapsed%(c.stepMs||13000))/(c.stepMs||13000),t=reduced?0:raw*raw*(3-2*raw),index=step%route.length,from=route[index],to=route[(index+1)%route.length]||from,segment=mapPlanRoutePoints(from,to),position=reduced?MAP_POINTS[from]:mapPlanPointAt(segment,t);
+ return{x:position.x,y:position.y,room:reduced?from:(raw<.5?from:to),from:from,to:to,index:index,route:route,progress:t,segment:segment};
+}
 function renderMapRoster(){const root=byId("mapCharacterRoster"),layer=byId("mapCharacterLayer");root.replaceChildren();layer.replaceChildren();mapCharacterRoomCache=Object.create(null);const people=mapAvailableCharacters();if(!people.some(function(c){return c.id===selectedMapCharacter}))selectedMapCharacter=people.length?people[0].id:null;if(!people.some(function(c){return c.id===followingMapCharacter}))followingMapCharacter=null;people.forEach(function(c,personIndex){const roster=document.createElement("button");roster.type="button";roster.className="map-roster-card";roster.style.setProperty("--portrait-delay",(-((personIndex*0.73)%5)).toFixed(2)+"s");roster.dataset.mapCharacterId=c.id;roster.setAttribute("aria-pressed",String(c.id===selectedMapCharacter));if(c.portrait){const img=document.createElement("img");img.src=c.portrait;img.alt="";roster.appendChild(img)}else{const sigil=document.createElement("span");sigil.className="map-roster-sigil";sigil.textContent=c.sigil;roster.appendChild(sigil)}const text=document.createElement("span"),name=document.createElement("strong"),location=document.createElement("small");name.textContent=c.name;location.dataset.locationFor=c.id;location.textContent="Ink somewhere in the house";text.append(name,location);roster.appendChild(text);roster.addEventListener("click",function(){selectMapCharacter(c.id)});root.appendChild(roster);const marker=document.createElement("button");marker.type="button";marker.className="map-ink-marker";marker.style.setProperty("--portrait-delay",(-((personIndex*0.73)%5)).toFixed(2)+"s");marker.dataset.mapCharacterId=c.id;marker.setAttribute("aria-label",c.name+" · moving footprint");marker.title="Select and follow "+c.name;if(c.portrait){const img=document.createElement("img");img.src=c.portrait;img.alt="";marker.appendChild(img)}else{const face=document.createElement("span");face.className="map-ink-face";face.textContent=c.sigil;marker.appendChild(face)}const label=document.createElement("span");label.className="map-ink-name";label.textContent=c.name;marker.appendChild(label);marker.addEventListener("click",function(){selectMapCharacter(c.id)});layer.appendChild(marker)});byId("mapLocationCount").textContent=Object.keys(MAP_POINTS).length+" rooms inked · "+people.length+" resident trails stirring";if(selectedMapCharacter)renderSelectedMapCharacter();else{byId("mapCharacterDetail").innerHTML='<div class="map-empty-note">No known residents are moving here yet. The house is being suspiciously quiet.</div>';byId("mapSpellDetail").innerHTML='<div class="spell-seal">✦</div><p>Choose a resident to open the matching field note.</p>'}}
 function makeMapButton(label,fn,primary){const button=document.createElement("button");button.type="button";button.className="button "+(primary?"primary":"quiet");button.textContent=label;button.addEventListener("click",fn);return button}
 function renderSelectedMapCharacter(){const c=MAP_CHARACTERS.find(function(item){return item.id===selectedMapCharacter}),card=byId("mapCharacterDetail");if(!c){return}const reduced=!!(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches),pos=mapWalker(c,Date.now(),reduced),home=CHAPTERS.find(function(ch){return ch.id===c.home});card.replaceChildren();const header=document.createElement("div");header.className="map-detail-header";if(c.portrait){const img=document.createElement("img");img.src=c.portrait;img.alt="";header.appendChild(img)}else{const face=document.createElement("span");face.className="map-detail-sigil";face.textContent=c.sigil;header.appendChild(face)}const titleBlock=document.createElement("div"),title=document.createElement("h3"),roleText=document.createElement("p");title.textContent=c.name;roleText.className="map-role";roleText.textContent=c.role;titleBlock.append(title,roleText);header.appendChild(titleBlock);card.appendChild(header);const location=document.createElement("span");location.className="map-current-location";location.textContent=(reduced?"Ink resting · ":"Moving ink · ")+(MAP_ROOM_LABELS[pos.room]||pos.room);card.appendChild(location);const quip=document.createElement("p");quip.textContent=c.quip;card.appendChild(quip);const actions=document.createElement("div");actions.className="map-card-actions";actions.appendChild(makeMapButton(followingMapCharacter===c.id?"✂ Stop tracing":"👣 Trace this route",function(){followingMapCharacter=followingMapCharacter===c.id?null:c.id;renderSelectedMapCharacter();updateMapFollowPath(mapWalker(c,Date.now()))},followingMapCharacter===c.id));actions.appendChild(makeMapButton("📜 Spark spell",function(){setGrimoirePage("spells")},false));if(home&&canVisitRoom(home))actions.appendChild(makeMapButton("Visit their scene ↗",function(){travelToRoom(c.home)},false));card.appendChild(actions);renderMapSpell(c,pos);byId("mapInkMessage").textContent=c.name+(reduced?" rests at ":" is moving through ")+(MAP_ROOM_LABELS[pos.room]||pos.room)+". The map’s ink is restless; the room gates still answer to clues.";byId("mapCharacterRoster").querySelectorAll("[data-map-character-id]").forEach(function(button){button.classList.toggle("selected",button.dataset.mapCharacterId===c.id);button.setAttribute("aria-pressed",String(button.dataset.mapCharacterId===c.id))})}
 function renderMapSpell(c,pos){const root=byId("mapSpellDetail");if(!root)return;root.replaceChildren();const seal=document.createElement("div");seal.className="spell-seal";seal.textContent="✦";const eyebrow=document.createElement("div");eyebrow.className="eyebrow";eyebrow.style.color="#80533d";eyebrow.textContent="FIELD CHARM · "+c.term;const title=document.createElement("h3");title.textContent=c.topic;const formula=document.createElement("p");formula.className="spell-formula";formula.textContent=c.formula||c.topic;const definition=document.createElement("p");definition.className="spell-definition";definition.textContent=(c.lesson&&c.lesson[S.role])||c.lesson.junior;const practice=document.createElement("p");practice.className="spell-practice";practice.textContent="Try this thought while exploring "+(MAP_ROOM_LABELS[pos.room]||pos.room)+". Ask what unit, version, process boundary and evidence would make the claim testable.";root.append(seal,eyebrow,title,formula,definition,practice)}
 function selectMapCharacter(id){selectedMapCharacter=id;followingMapCharacter=null;selectedMapRoomCache="";renderSelectedMapCharacter();updateMapFollowPath(mapWalker(MAP_CHARACTERS.find(function(c){return c.id===id}),Date.now()))}
 function setGrimoirePage(page){grimoirePage=page;byId("mapResidentsPage").hidden=page!=="residents";byId("mapSpellsPage").hidden=page!=="spells";byId("mapTabResidents").setAttribute("aria-selected",String(page==="residents"));byId("mapTabSpells").setAttribute("aria-selected",String(page==="spells"))}
-function updateMapFollowPath(pos){const path=byId("mapFollowPath");if(!path)return;const active=followingMapCharacter&&selectedMapCharacter===followingMapCharacter;if(!active||!pos){path.setAttribute("d","");path.classList.remove("active");return}const points=[{x:pos.x,y:pos.y}];for(let i=1;i<pos.route.length;i++){points.push(MAP_POINTS[pos.route[(pos.index+i)%pos.route.length]])}path.setAttribute("d",points.map(function(p,i){return (i?"L":"M")+p.x+" "+p.y}).join(" "));path.classList.add("active")}
+function mapPlanPathTail(points,t){
+ if(!points||!points.length)return[];
+ let total=0;for(let i=1;i<points.length;i++)total+=Math.hypot(points[i].x-points[i-1].x,points[i].y-points[i-1].y);
+ const target=Math.max(0,Math.min(1,t))*total,result=[mapPlanPointAt(points,t)];let walked=0;
+ for(let i=1;i<points.length;i++){const a=points[i-1],b=points[i],length=Math.hypot(b.x-a.x,b.y-a.y);walked+=length;if(walked>target+.01)result.push(b)}
+ return result;
+}
+function updateMapFollowPath(pos){
+ const path=byId("mapFollowPath");if(!path)return;
+ const active=followingMapCharacter&&selectedMapCharacter===followingMapCharacter;
+ if(!active||!pos){path.setAttribute("d","");path.classList.remove("active");return}
+ const points=mapPlanPathTail(pos.segment,pos.progress);
+ for(let step=1;step<pos.route.length;step++){
+  const from=pos.route[(pos.index+step)%pos.route.length],to=pos.route[(pos.index+step+1)%pos.route.length],segment=mapPlanRoutePoints(from,to);
+  if(segment.length>1)points.push.apply(points,segment.slice(1));
+ }
+ path.setAttribute("d",points.map(function(p,i){return(i?"L":"M")+p.x+" "+p.y}).join(" "));
+ path.classList.add("active");
+}
 function renderWorldMap(){renderMapFloorplan();renderMapRoutes();renderMapRooms();renderMapRoster();const point=MAP_POINTS[chapter().id];if(point)byId("mapPlayerGlyph").setAttribute("transform","translate("+point.x+" "+(point.y+40)+")");bindMapRouteHighlight();setGrimoirePage(grimoirePage)}
 function animateWorldMap(frameTime){if(byId("worldMapBackdrop").hidden){mapAnimationFrame=0;mapLastFrame=0;return}const reduced=!!(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches),frame=Number(frameTime)||performance.now();if(!reduced&&frame-mapLastFrame<33){mapAnimationFrame=requestAnimationFrame(animateWorldMap);return}mapLastFrame=frame;const now=Date.now(),people=mapAvailableCharacters(),slots={};people.forEach(function(c){const pos=mapWalker(c,now,reduced);slots[pos.room]=slots[pos.room]||[];const slot=slots[pos.room].length;slots[pos.room].push(c.id);const marker=byId("mapCharacterLayer").querySelector('[data-map-character-id="'+c.id+'"]');if(marker){const offset=(slot-(slots[pos.room].length-1)/2)*24;marker.style.left=((pos.x+offset)/960*100)+"%";marker.style.top=(pos.y/620*100)+"%";marker.classList.toggle("selected",c.id===selectedMapCharacter);marker.classList.toggle("following",c.id===followingMapCharacter);const roomKey=pos.room+"|"+reduced;if(mapCharacterRoomCache[c.id]!==roomKey){mapCharacterRoomCache[c.id]=roomKey;marker.setAttribute("aria-label",c.name+" · "+(reduced?"resting at ":"moving through ")+(MAP_ROOM_LABELS[pos.room]||pos.room));const row=byId("mapCharacterRoster").querySelector('[data-location-for="'+c.id+'"]');if(row)row.textContent=(reduced?"At: ":"Now: ")+(MAP_ROOM_LABELS[pos.room]||pos.room)}}});const here=MAP_POINTS[chapter().id];if(here)byId("mapPlayerGlyph").setAttribute("transform","translate("+here.x+" "+(here.y+40)+")");const selected=MAP_CHARACTERS.find(function(c){return c.id===selectedMapCharacter});if(selected){const pos=mapWalker(selected,now,reduced);if(pos.room!==selectedMapRoomCache){selectedMapRoomCache=pos.room;renderSelectedMapCharacter()}if(followingMapCharacter===selected.id)updateMapFollowPath(pos)}mapAnimationFrame=reduced?0:requestAnimationFrame(animateWorldMap)}
 function stopMapAnimation(){if(mapAnimationFrame)cancelAnimationFrame(mapAnimationFrame);mapAnimationFrame=0;mapLastFrame=0}
@@ -2262,17 +2417,21 @@ init();
 
 <script id="hover-hud-release-pointer-focus">
 (() => {
- const panels = [...document.querySelectorAll('#game > .topbar, #bottomHud')];
+ const game = document.getElementById('game');
+ const topbar = game?.querySelector(':scope > .topbar');
+ const panels = [topbar, game?.querySelector('#bottomHud')].filter(Boolean);
  for (const panel of panels) {
-  const handle = panel.querySelector('.hud-reveal-handle');
-  const sync = () => { if (handle) handle.setAttribute('aria-expanded', String(panel.matches(':hover') || panel.matches(':focus-within'))); };
-  panel.addEventListener('pointerenter', sync);
-  panel.addEventListener('pointerleave', event => {
-   if (event.pointerType === 'mouse' && panel.contains(document.activeElement)) document.activeElement.blur();
-   requestAnimationFrame(sync);
-  });
-  panel.addEventListener('focusin', sync);
-  panel.addEventListener('focusout', () => requestAnimationFrame(sync));
+  const handle = panel === topbar ? game.querySelector(':scope > .top-hud-handle') : panel.querySelector('.hud-reveal-handle');
+  const sync = () => { if (handle) handle.setAttribute('aria-expanded', String(panel.matches(':hover,:focus-within') || handle.matches(':hover,:focus'))); };
+  for (const target of [panel, handle].filter(Boolean)) {
+   target.addEventListener('pointerenter', sync);
+   target.addEventListener('pointerleave', event => {
+    if (event.pointerType === 'mouse' && target === panel && panel.contains(document.activeElement)) document.activeElement.blur();
+    requestAnimationFrame(sync);
+   });
+   target.addEventListener('focusin', sync);
+   target.addEventListener('focusout', () => requestAnimationFrame(sync));
+  }
  }
 })();
 </script>
