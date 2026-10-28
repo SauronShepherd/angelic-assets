@@ -1,6 +1,6 @@
 # 🎃 Special Halloween 🎃 Throw Your Threads In The Air — asset map
 
-Keep `index.html` beside the `assets/` folder. The HTML keeps its artwork and soundtrack external. Every image and audio file in this package has a UUID filename; `asset-map.json` maps each UUID back to its source name and checksum. The estate map is drawn in inline SVG/CSS as a two-page Spark field grimoire, with moving character trails and role-scaled educational notes, so it adds no separate image asset.
+Keep `index.html` beside the `assets/` folder. The HTML keeps its artwork and soundtrack external. Original artwork and soundtrack tracks use UUID filenames; the newly added environmental effects use descriptive filenames. `asset-map.json` maps every file back to its source and checksum. The estate map is drawn in inline SVG/CSS as a two-page Spark field grimoire, with moving character trails and role-scaled educational notes, so it adds no separate image asset.
 
 Character portraits are transparent, hand-inked WebP cutouts with a shared plum, indigo, and antique-gold treatment that matches the room illustrations. Gentle portrait drift and speaker pulses are CSS-driven and respect reduced-motion preferences. Scene hotspots summon an illustrated infernal action wheel: layered cartoon flame tongues lick around an engraved sigil, glowing embers drift at the rim, and each action uses a hand-drawn icon medallion. The flame shapes deform independently instead of relying on a generic glow pulse. Available destinations glow as directional arrows over each illustration. The case file looks like Edda’s spiral-bound, hand-written field notebook, complete with doodles and rotating margin notes. The three illustrated investigator cards set the learning route, and the selected investigator appears in the scene. Every visit opens the illustrated introduction and character choice; beginning a new case starts outside the Outer Gates, while continuing a save is an explicit choice.
 
@@ -114,3 +114,76 @@ The room props are separate transparent cartoon illustrations so the player can 
 | Project Loom Carnival | `assets/props/e5cd0d52-6847-4157-b953-14e0051dd72e.webp` | Lift the trapdoor |
 | Mirror Chapel | `assets/props/fe6ee59b-e24c-4083-884c-0474f24feac9.webp` | Pull the curtain |
 | Duplicate Delivery Ledger | `assets/props/3bce8b07-79cf-460f-8d08-7905884068e9.webp` | Push the handcart |
+
+
+## Random environmental sound effects
+
+The game now loads these openly reusable field recordings locally from this package and randomly spatializes them by distance and stereo position. License and attribution records are also included in `asset-map.json`.
+
+| In-game cue | File | Source / creator | License |
+|---|---|---|---|
+| Crickets | `assets/audio/ambient-crickets.ogg` | [Gryllus campestris 02](https://commons.wikimedia.org/wiki/File:Gryllus_campestris_02_(HS).ogg), Harald Süpfle | CC BY-SA 3.0 |
+| Drafting / howling wind | `assets/audio/ambient-wind.ogg` | [Howling wind](https://commons.wikimedia.org/wiki/File:Howling_wind.ogg), Tvabutzku1234 | CC0 1.0 |
+| Distant wolf pack | `assets/audio/ambient-wolf-howl.ogg` | [Wolf howls](https://commons.wikimedia.org/wiki/File:Wolf_howls.ogg), U.S. Fish and Wildlife Service | Public domain |
+| Owl call | `assets/audio/ambient-owl-call.ogg` | [Otus sunia](https://commons.wikimedia.org/wiki/File:Otus_sunia.ogg), Raghu | Public domain |
+| Crow call | `assets/audio/ambient-crow-call.ogg` | [American Crow](https://commons.wikimedia.org/wiki/File:American_Crow.ogg), G McGrane | Public domain |
+| Creature / spooky growl | `assets/audio/ambient-creature-growl.ogg` | [Monster growls](https://commons.wikimedia.org/wiki/File:Monster_growls.ogg), stilgar / PDSounds | Public domain |
+
+### Reusable spatial cue examples
+
+```js
+// Nature at the gates: weak, distant cricket bed from the left.
+playEnvironmentalSound("crickets", { distance: "far", direction: "left" });
+// A close gust crosses from the right.
+playEnvironmentalSound("wind", { distance: "near", direction: "right" });
+// Wolves remain outside and distant, slightly to the left.
+playEnvironmentalSound("wolfHowl", { distance: "far", direction: "left" });
+// Owl behind the player's right shoulder.
+playEnvironmentalSound("owlCall", { distance: "middle", direction: "right" });
+// Crow close to the center, then answering from far left.
+playEnvironmentalSound("crowCall", { distance: "near", direction: "center" });
+playEnvironmentalSound("crowCall", { distance: "far", direction: "left" });
+// The Wraith breathes nearby; the processed wind cue feels ghostly for a random 1–5x base duration.
+playEnvironmentalSound("ghostBreath", { distance: "near", direction: "right" });
+// Pin a cue to 3x its base duration; the game normally randomizes this from 1x to 5x.
+playEnvironmentalSound("owlCall", { distance: "middle", direction: "center", durationMultiplier: 3 });
+// A creature answers from far away or startles from one ear.
+playEnvironmentalSound("creatureGrowl", { distance: "far", direction: "center" });
+playEnvironmentalSound("creatureGrowl", { distance: "near", direction: "left" });
+```
+
+`distance` accepts `near`, `middle`, or `far`; `direction` accepts `left`, `center`, `right`, or a numeric pan value from -1 to 1. Omitting either lets the director choose a randomized position and distance. Each event's base clip length is multiplied by a random factor from 1x to 5x; looping allows an effect to outlast its original recording. A 1.1–2.4 second gain ramp fades the clip away instead of chopping it off. The recordings are loudness-normalized so a quiet owl or wolf clip is not buried under the soundtrack. The scheduler waits for a user gesture to satisfy browser autoplay rules, starts within about a second after the clips load, then waits a random 5–9 seconds after each sound finishes before choosing the next one. Ambient playback begins only after the player enters a case as an investigator.
+
+## Maintenance note · 28 October 2026
+
+The latest gameplay QA pass found short-viewport problems with overlay/HUD stacking, scare dismissal, and the final paragraph of the introductory letter, as well as confusing success feedback after the Outer Gates puzzle. The game HTML was updated to put modal overlays above the sliding HUD, make the scare fit short screens with a reachable dismissal button, allow the letter to scroll, and clarify successful gate feedback. The source remains in the `articles` repository at `public/interactive/throw-your-threads-in-the-air/experience.cdn.html`; the asset repository `index.html` is a synchronized deployment copy. Browser verification is still pending. Consult the articles repository `THROW_YOUR_THREADS_IN_THE_AIR_HANDOFF.md` for remaining issues and workflow.
+
+**28 October 2026 · Outer Gates intro:** The intro story panel is now 320px high on viewports no taller than 560px, scoped to the Outer Gates background to leave other rooms unchanged. Deployment HTML copies were synchronized; visual verification remains pending.
+
+**28 October 2026 · Outer Gates panel correction:** After the initial increase still showed scroll, the Gates-only short-screen panel was expanded to fill up to 420px of scene height, leaving room for the bottom controls. The rule is keyed to the scene's `data-room` and other rooms remain unchanged. Deployment copies are synchronized; verify at 1276 × 491.
+
+**28 October 2026 · Pip hotspot:** Matched Pip's circular marker border, fill, shadow, hover scale, and size to the other hotspots (76px desktop, 62px narrow screens), with the portrait contained inside. The asset-repository HTML is synchronized with the source.
+
+**28 October 2026 · Gates story panel:** Live measurement found a small 5px internal overflow at 1920 × 1023 because the short-screen-only rule did not apply. Added a Gates-only 340–360px panel height for normal viewports and synchronized the deployment copy.
+
+**28 October 2026 · Panel verification:** Rechecked in Chrome at 1920 × 855: the Gates story bubble is 360px tall and page 1 text fits exactly (245px scroll height / 245px client height). Verify later pages and the short QA viewport (1276 × 491) before closing the visual QA item.
+
+**28 October 2026 · Bottom HUD tab:** The reveal tab was visually detached above the panel border. It is now attached inside the panel's top edge, with open-state padding reserved for the tab; deployment HTML is synchronized.
+
+**28 October 2026 · Hotspot areas:** The game's coordinate JSON now uses named rectangular clickable regions (`left`, `top`, `width`, `height`) as percentages of the scene. The marker stays centered in the region, while the full rectangle is clickable. Existing point and four-number array formats remain compatible; current scene entries were migrated and the asset-repository HTML was synchronized.
+
+**28 October 2026 · Gates intro panel height:** Reduced the Gates story panel cap to 340px after measuring its content; the text, heading, footer, and padding fit without a scroll bar. The synchronized asset-repository HTML contains the same adjustment.
+
+**28 October 2026 · Invisible hotspot areas:** Rectangular area definitions now stay visually transparent, including on hover and focus; only the centered circular marker and label appear. Deployment HTML synchronized.
+
+**28 October 2026 · Lower HUD height:** Reduced the open lower drawer's vertical padding and row heights so content sits directly below its attached tab. Narrow screens use slightly larger 40px/36px rows. The closed state continues to show only the tab; deployment HTML synchronized.
+
+**28 October 2026 · Lower HUD geometry:** The lower drawer now uses the same edge behavior as the top HUD: the closed panel is fully below the viewport and only its tab protrudes; opening slides the panel up beneath the tab. Compact padding remains in place and the asset-repository HTML is synchronized.
+
+**28 October 2026 · Hotspot marker visibility:** Area hitboxes now keep their centered portrait or glyph visible at rest, while the rectangular click area stays transparent and labels remain hover/focus-only. This overrides the older opacity-zero discovery rule; deployment HTML synchronized.
+
+## 2026-10-28 — hotspots por áreas
+La capa de hotspots usa rectángulos definidos en hotspot-coordinates.json; el marcador visual (incluida la imagen de Pip) solo se revela al interactuar dentro de su área. Se eliminó el override que los hacía visibles todos a la vez.
+
+## 2026-10-28 — área gate-lock
+El área de interacción del candado es left:40, top:55, width:14, height:16; evitar valores mayores que 100 que expandan el hit-area fuera de la escena.
