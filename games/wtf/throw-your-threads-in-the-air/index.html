@@ -804,6 +804,115 @@ html,body{width:100%;height:100dvh;min-height:0;max-height:100dvh;overflow:hidde
 .map-room-pin.related rect{stroke:#b54e51;stroke-width:3;filter:drop-shadow(0 0 8px #aa4a4d88)}
 @media(max-width:820px){.map-plan-building{stroke-width:5}.map-plan-title{font-size:9px;letter-spacing:1.4px}.map-room-pin text{font-size:9.5px}.map-room-pin .map-room-state{font-size:8px}}
 </style>
+<style id="hud-bar-alignment-fix">
+#game:not([hidden])>.topbar{position:absolute;top:0;left:0;right:0;z-index:70;transform:translateY(calc(-100% + 15px));transition:transform .38s cubic-bezier(.2,.8,.2,1),box-shadow .3s ease}
+#game:not([hidden])>.topbar:hover,#game:not([hidden])>.topbar:focus-within{transform:translateY(0);box-shadow:0 12px 30px #08040bcc}
+#game:not([hidden])>.topbar:not(:hover):not(:focus-within)>:not(.top-hud-handle){visibility:hidden}
+#game:not([hidden])>.topbar .top-hud-handle{position:absolute;left:50%;bottom:-1px;top:auto;z-index:2;width:92px;height:16px;transform:translateX(-50%);border:1px solid #a88259;border-top:0;border-radius:0 0 12px 12px;background:linear-gradient(180deg,#211621,#58342f 74%,#bd8050);box-shadow:0 4px 14px #100914cc;transition:filter .2s ease,background .25s ease}
+#game:not([hidden])>.topbar .top-hud-handle::before{width:38px;height:3px}
+#game:not([hidden])>.topbar .top-hud-handle:hover,#game:not([hidden])>.topbar .top-hud-handle:focus-visible{filter:brightness(1.25);outline:2px solid #f4cb7a;outline-offset:2px}
+#game .bottom-hud{position:fixed;left:clamp(8px,1.4vw,18px);right:clamp(8px,1.4vw,18px);bottom:0;z-index:60;transform:translateY(calc(100% - 16px));transition:transform .38s cubic-bezier(.2,.8,.2,1),box-shadow .3s ease;pointer-events:auto}
+#game .bottom-hud:hover,#game .bottom-hud:focus-within{transform:translateY(0);box-shadow:0 -12px 30px #08040bcc}
+#game .bottom-hud .bottom-hud-handle{position:absolute;top:0;left:50%;width:92px;height:16px;transform:translateX(-50%);z-index:2;pointer-events:auto}
+#game .bottom-hud .bottom-hud-handle::before{width:38px;height:3px}
+@media(hover:none),(pointer:coarse){#game:not([hidden])>.topbar{position:relative;transform:none}#game:not([hidden])>.topbar>*{visibility:visible}#game:not([hidden])>.topbar .top-hud-handle,#game .bottom-hud .bottom-hud-handle{display:none}#game .bottom-hud{position:relative;transform:none;left:auto;right:auto;bottom:auto}}
+@media(prefers-reduced-motion:reduce){#game:not([hidden])>.topbar,#game .bottom-hud{transition:none}}
+</style>
+<style id="smooth-letter-opening">
+#intro .manor-letter.is-emerging{
+ opacity:0;
+ will-change:opacity,transform;
+ transform-origin:50% 50%;
+ animation:letterRiseSmooth 1.42s cubic-bezier(.22,.72,.2,1) both;
+ backface-visibility:hidden;
+ clip-path:none;
+ filter:drop-shadow(0 18px 34px #160b1866);
+}
+@keyframes letterRiseSmooth{
+ 0%{opacity:0;transform:translate3d(-50%,34%,0) scale(.72) rotate(-1.6deg)}
+ 18%{opacity:.42;transform:translate3d(-50%,25%,0) scale(.78) rotate(-1.15deg)}
+ 52%{opacity:.9;transform:translate3d(-50%,-5%,0) scale(.91) rotate(-.65deg)}
+ 78%{opacity:1;transform:translate3d(-50%,-40%,0) scale(.98) rotate(-.34deg)}
+ 100%{opacity:1;transform:translate3d(-50%,-50%,0) scale(1) rotate(-.25deg)}
+}
+#intro .manor-letter.is-opened{opacity:1;transform:rotate(-.25deg);filter:none;will-change:auto}
+#intro .sealed-envelope.is-opening .envelope-flap{transition-duration:.68s}
+@media(max-width:700px){
+ #intro .manor-letter.is-emerging{animation-name:letterRiseSmoothMobile}
+ @keyframes letterRiseSmoothMobile{
+  0%{opacity:0;transform:translate3d(-50%,32%,0) scale(.7) rotate(-1.5deg)}
+  20%{opacity:.45;transform:translate3d(-50%,22%,0) scale(.77) rotate(-1.1deg)}
+  55%{opacity:.92;transform:translate3d(-50%,-8%,0) scale(.9) rotate(-.6deg)}
+  80%{opacity:1;transform:translate3d(-50%,-41%,0) scale(.98) rotate(-.3deg)}
+  100%{opacity:1;transform:translate3d(-50%,-50%,0) scale(1) rotate(-.25deg)}
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ #intro .manor-letter.is-emerging{animation:none;opacity:1;transform:translate3d(-50%,-50%,0) rotate(-.25deg);filter:none}
+}
+</style>
+<style id="letter-emerges-from-seal">
+#intro .manor-letter.is-emerging{
+ opacity:0;
+ transform-origin:50% 50%;
+ animation:letterUnsealSmooth 1.48s cubic-bezier(.2,.72,.18,1) both;
+ filter:drop-shadow(0 10px 24px #160b1844);
+ will-change:opacity,transform;
+}
+@keyframes letterUnsealSmooth{
+ 0%{opacity:0;transform:translate3d(-50%,-50%,0) scale(.38) rotate(-.25deg)}
+ 22%{opacity:.12;transform:translate3d(-50%,-50%,0) scale(.46) rotate(-.3deg)}
+ 48%{opacity:.58;transform:translate3d(-50%,-50%,0) scale(.66) rotate(-.35deg)}
+ 72%{opacity:.9;transform:translate3d(-50%,-50%,0) scale(.86) rotate(-.3deg)}
+ 100%{opacity:1;transform:translate3d(-50%,-50%,0) scale(1) rotate(-.25deg)}
+}
+#intro .manor-letter.is-opened{opacity:1;transform:rotate(-.25deg);filter:none;will-change:auto}
+@media(max-width:700px){
+ #intro .manor-letter.is-emerging{animation-name:letterUnsealSmoothMobile}
+ @keyframes letterUnsealSmoothMobile{
+  0%{opacity:0;transform:translate3d(-50%,-50%,0) scale(.34) rotate(-.25deg)}
+  24%{opacity:.14;transform:translate3d(-50%,-50%,0) scale(.43) rotate(-.3deg)}
+  52%{opacity:.6;transform:translate3d(-50%,-50%,0) scale(.65) rotate(-.35deg)}
+  76%{opacity:.92;transform:translate3d(-50%,-50%,0) scale(.86) rotate(-.3deg)}
+  100%{opacity:1;transform:translate3d(-50%,-50%,0) scale(1) rotate(-.25deg)}
+ }
+}
+</style>
+<style id="letter-emerges-from-envelope-final">
+#intro .manor-letter.is-emerging{
+ opacity:0;
+ transform-origin:50% 50%;
+ animation:letterRiseFromEnvelope 1.3s cubic-bezier(.18,.76,.2,1) .06s both;
+ will-change:opacity,transform;
+ filter:drop-shadow(0 16px 30px #160b1850);
+}
+@keyframes letterRiseFromEnvelope{
+ 0%{opacity:0;transform:translate3d(-50%,8%,0) scale(.3) rotate(-1.4deg)}
+ 24%{opacity:.42;transform:translate3d(-50%,19%,0) scale(.58) rotate(-.9deg)}
+ 52%{opacity:.82;transform:translate3d(-50%,-10%,0) scale(.78) rotate(-.55deg)}
+ 78%{opacity:.97;transform:translate3d(-50%,-40%,0) scale(.94) rotate(-.32deg)}
+ 100%{opacity:1;transform:translate3d(-50%,-50%,0) scale(1) rotate(-.25deg)}
+}
+#intro .manor-letter.is-opened{opacity:1;transform:rotate(-.25deg);filter:none;will-change:auto}
+@media(max-width:700px){
+ #intro .manor-letter.is-emerging{animation-name:letterRiseFromEnvelopeMobile}
+ @keyframes letterRiseFromEnvelopeMobile{
+  0%{opacity:0;transform:translate3d(-50%,8%,0) scale(.28) rotate(-1.3deg)}
+  24%{opacity:.44;transform:translate3d(-50%,18%,0) scale(.56) rotate(-.85deg)}
+  52%{opacity:.84;transform:translate3d(-50%,-11%,0) scale(.78) rotate(-.5deg)}
+  78%{opacity:.97;transform:translate3d(-50%,-40%,0) scale(.94) rotate(-.3deg)}
+  100%{opacity:1;transform:translate3d(-50%,-50%,0) scale(1) rotate(-.25deg)}
+ }
+}
+</style>
+<style id="bottom-hud-direct-trigger">
+#game #bottomHud{position:fixed!important;left:clamp(8px,1.4vw,18px);right:clamp(8px,1.4vw,18px);bottom:0;z-index:90;pointer-events:none}
+#game #bottomHud>.bottom-hud-handle{position:fixed;left:50vw;right:auto;top:auto;bottom:0;transform:translateX(-50%);z-index:92;pointer-events:auto}
+#game #bottomHud:hover,#game:has(#bottomHud>.bottom-hud-handle:hover) #bottomHud,#game:has(#bottomHud>.bottom-hud-handle:focus-visible) #bottomHud{transform:translateY(0);pointer-events:auto}
+#game #bottomHud:not(:hover):not(:focus-within){transform:translateY(calc(100% - 16px))}
+#game #bottomHud:hover>.bottom-hud-handle,#game:has(#bottomHud>.bottom-hud-handle:hover) #bottomHud>.bottom-hud-handle,#game:has(#bottomHud>.bottom-hud-handle:focus-visible) #bottomHud>.bottom-hud-handle{bottom:auto;top:0;position:absolute}
+@media(hover:none),(pointer:coarse){#game #bottomHud{position:relative!important;transform:none!important;pointer-events:auto;left:auto;right:auto;bottom:auto}#game #bottomHud>.bottom-hud-handle{display:none}}
+</style>
 </head>
 <body>
 <section id="intro" data-stage="title" aria-label="Threadvale Manor opening sequence">
@@ -878,8 +987,8 @@ html,body{width:100%;height:100dvh;min-height:0;max-height:100dvh;overflow:hidde
    <label class="volume-control game-volume">🎚️ <input id="volumeGame" type="range" min="0" max="0.7" step="0.01" value="0.24" aria-label="Background music volume"></label>
   </div>
   <span class="sound-status" id="trackLabel" aria-live="polite">Museum Main Theme</span>
+  <button type="button" class="hud-reveal-handle top-hud-handle" aria-label="Show game controls" aria-controls="gameControls" aria-expanded="false"></button>
  </header>
- <button type="button" class="hud-reveal-handle top-hud-handle" aria-label="Show game controls" aria-controls="gameControls" aria-expanded="false"></button>
  <div class="scene-nav" hidden><button class="icon-button" id="previousRoom" title="Previous open room">← Room</button><nav id="progressStrip" class="progress-strip" aria-label="Open rooms"></nav><button class="icon-button" id="nextRoom" title="Next open room">Room →</button></div><p class="room-nav-hint">✦ Follow the demon-fire arrows over the illustration to travel. Open the field grimoire for the full map.</p>
  <div class="layout">
   <section class="scene-shell" aria-labelledby="roomTitle">
@@ -1627,28 +1736,28 @@ const ROLES = [
 ];
 
 const TRACKS = {
- "01-museum-main":{label:"Museum Main Theme · Family",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/b2d707ec-e46d-4bb7-9faa-f34e6b7d073e.mp3"},
- "05-seven-bees":{label:"Seven Bees · Main Family",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/3d448729-9323-4c25-8adb-70c9b03d1019.mp3"},
- "10-museum-threshold":{label:"Museum Threshold · Crossing Family",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/f8d4e3dc-989c-4f49-a5e2-b9d9f66030b7.mp3"},
- "12-continuity-failure":{label:"Continuity Failure",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/a7dc50b7-cbd0-4725-b1a4-0f0677d1b54c.mp3"},
- "12-continuity-failure-variation":{label:"Continuity Failure · Variation",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/7731a0f8-09c2-4d5b-955c-90c8d6c5e7e3.mp3"},
- "13-field-resonance":{label:"Field Access · Resonance Test",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/fe630473-9075-4dff-ab0f-e37be616fa9c.mp3"},
- "13-field-resonance-variation":{label:"Field Access · Resonance Test · Variation",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/1c660fb5-b1ec-44d6-b0b4-ec187e259e56.mp3"},
- "14-wrong-storage":{label:"Wrong Storage · Incorrect Reality",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/d5aeca71-cb66-4119-af9e-961ebdee0aef.mp3"},
- "14-wrong-storage-variation":{label:"Wrong Storage · Incorrect Reality · Variation",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/ae66d133-5a8a-4ce6-afcf-45050732a32d.mp3"},
- "15-human-quiet":{label:"Museum Human Quiet",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/0402facf-3cf5-413a-99b9-550e5142609b.mp3"},
- "19-work-process":{label:"Fullonica · Work Process",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/5a5d54c4-5e22-4941-9e62-d39a6264a562.mp3"},
- "20-rooftop-wonder":{label:"Rooftop Wonder",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/7518ce87-db63-4610-a430-32421b680189.mp3"},
- "24-accounting-puzzle":{label:"Dama Accounting · Main Puzzle",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/e3109065-509e-4356-bf68-fb92883fa169.mp3"},
- "28-voss-theme":{label:"Voss Main Theme",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/ae192488-353e-4489-9e80-afeec95cf693.mp3"},
- "29-moral-confrontation":{label:"Dama · Moral Confrontation",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/0088dfe4-4387-40a2-ac7b-6f51bf474fe0.mp3"},
- "30-baseline-causal-puzzle":{label:"Baseline · Causal Puzzle",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/b3ea0be4-6664-44aa-bf6c-b9ef2cb1541e.mp3"},
- "31-early-fallout":{label:"First Plume · Early Fallout Suite",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/00e6c3e6-4dfa-4191-89e6-36868cefcc18.mp3"},
- "31-early-fallout-variation":{label:"First Plume · Early Fallout · Variation",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/d2d208e7-dc20-4cf9-bc01-5a3e45ded931.mp3"},
- "39-final-causal-board":{label:"Final Causal Board",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/f0eb0314-6f40-4e7c-8849-2ea634a47a53.mp3"},
- "39-final-causal-board-variation":{label:"Final Causal Board · Variation",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/f6bc281b-cb34-4627-86f9-87a8ab932201.mp3"},
- "40-final-solution":{label:"Final Solution · Master Family",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/a6de1b7d-54bb-4d80-a551-ec6de0c5c439.mp3"},
- "45-first-story-finale":{label:"The First Story · Finale Suite",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/audio/87d27aa4-badf-4378-8b11-410839419eaf.mp3"}
+ "01-museum-main":{label:"Front Hall · Midnight Arrival",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/front-hall-night-arrival.mp3"},
+ "05-seven-bees":{label:"Portrait Gallery · Scheduler Waltz",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/portrait-gallery-scheduler-waltz.mp3"},
+ "10-museum-threshold":{label:"Outer Gates · Midnight Watch",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/outer-gates-midnight-watch.mp3"},
+ "12-continuity-failure":{label:"Condition Room · Waiting Thread",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/condition-room-waiting-thread.mp3"},
+ "12-continuity-failure-variation":{label:"Condition Knot · Puzzle",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/condition-knot-puzzle.mp3"},
+ "13-field-resonance":{label:"Jekyll & Hyde Lab · Resonance",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/jekyll-hyde-resonance-lab.mp3"},
+ "13-field-resonance-variation":{label:"Jekyll & Hyde Lab · Experiment One",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/jekyll-hyde-experiment-one.mp3"},
+ "14-wrong-storage":{label:"Mirror Chapel · Wrong Storage",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/mirror-chapel-wrong-storage.mp3"},
+ "14-wrong-storage-variation":{label:"Mirror Twins · Race Puzzle",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/mirror-twins-race-puzzle.mp3"},
+ "15-human-quiet":{label:"Pip & Edda · Quiet Clue",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/quiet-clue-pip-and-edda.mp3"},
+ "19-work-process":{label:"Executor Workshop · Night Shift",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/executor-workshop-shift.mp3"},
+ "20-rooftop-wonder":{label:"Loom Carnival · Rooftop Wonder",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/loom-carnival-rooftop-wonder.mp3"},
+ "24-accounting-puzzle":{label:"Cemetery · Memory Accounting",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/cemetery-memory-accounting-puzzle.mp3"},
+ "28-voss-theme":{label:"Clocktower · JDK Carnival",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/clocktower-jdk-carnival.mp3"},
+ "29-moral-confrontation":{label:"Producer · Confrontation",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/producer-confrontation.mp3"},
+ "30-baseline-causal-puzzle":{label:"Outer Gates · Census Puzzle",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/outer-gate-census-puzzle.mp3"},
+ "31-early-fallout":{label:"Memory Graveyard · Fallout",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/memory-graveyard-fallout.mp3"},
+ "31-early-fallout-variation":{label:"Reaper · OOM Investigation",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/reaper-oom-investigation.mp3"},
+ "39-final-causal-board":{label:"Retry Room · Causal Board",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/retry-room-causal-board.mp3"},
+ "39-final-causal-board-variation":{label:"Madame Retry · Experiment",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/madame-retry-experiment.mp3"},
+ "40-final-solution":{label:"Final Diagnosis · Resolution",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/final-diagnosis-resolution.mp3"},
+ "45-first-story-finale":{label:"Case Closed · End Credits",src:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@special_halloween_20261028_0606/games/wtf/throw-your-threads-in-the-air/assets/audio/case-closed-end-credits.mp3"},
 };
 
 const GLOSSARY = [
@@ -1949,7 +2058,9 @@ CHAPTERS.unshift({
  hotspots:[
   {id:"pip",label:"Talk to Pip",type:"person",name:"Pip the Lantern Mouse",role:"House guide · brave only in the case book",portrait:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/characters/c89560f6-3b63-4182-82d0-bb32668485f1.webp",track:"15-human-quiet",intro:"Pip guards the front gate with a lantern, a damp case book, and a snack he claims is for morale. He writes down every count, then circles the word ‘approximately’ until the paper gives up.",clue:"Pip’s field note separates the Python client, JVM driver, executor processes, optional Python workers, threads, and task attempts. Each entry has its own boundary.",topics:["Apache Spark","PySpark","Driver","Executor"],lines:[{q:"What is Spark, in ordinary words?",a:"Spark is an engine for processing data in parallel. A driver plans and coordinates work; executors process data partitions. PySpark lets Python code ask Spark to do that work. The exact processes depend on deployment mode."},{q:"Does every Spark task get its own thread?",a:"No. Tasks are units of work. Executor thread pools run task attempts according to available slots and the execution path. A task attempt is not a permanent thread."},{q:"Why does this number need more labels?",a:"A JVM thread count, Python-worker process count, task-attempt total, and OS-thread sample are different measurements. Give each its unit, process boundary, method, and time."}]},
   {id:"count-plaque",label:"Examine the brass census",type:"object",name:"The Brass Census Plaque",portrait:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/characters/a5f6c071-0df6-46b4-a364-c5e0f29c933f.webp",track:"10-museum-threshold",intro:"A brass plate lists 87 THREADS beside three scratched-out subtotals: 143, 1, and 2. There is no process ID, unit, collection method, or time. The plaque looks very sure of itself.",clue:"A displayed count alone does not identify its unit, process or container boundary, collection method, timestamp, or whether it counts task attempts rather than live threads.",topics:["Thread","Process","Task attempt"],lines:[{q:"Can I add the plaque’s numbers together?",a:"Not without proving they share a unit, population, scope, and sampling time. A task-attempt total is not a live-thread count."},{q:"What should a useful census record?",a:"The measured entity and unit, PID or container boundary, collection method, timestamp, runtime version, and whether the value is a snapshot, peak, or cumulative count."}]},
-  {id:"wraith",label:"Confront the ink shadow",type:"person",name:"The Tangle-Wraith",role:"Monster · eats missing context",portrait:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/characters/7000d8e9-e7a4-40fd-b150-9447a06fd99e.webp",track:"14-wrong-storage",intro:"It wears the number 87 as a crown. ‘Every thread in the whole application!’ it croaks, despite having no list of processes, no timestamp, and what appears to be a receipt stuck to its forehead.",clue:"The Wraith’s universal total is an inference unsupported by the plaque. A count without scope cannot establish every thread in an application.",topics:["Evidence scope","Thread"],lines:[{q:"Why are you so certain?",a:"Because I have a large number and a dramatic entrance. Neither is a collection method. You need the unit, boundary, source, timestamp, and version before making a system-wide claim."},{q:"Is 87 wrong?",a:"Not necessarily. It may be an accurate count of something. The evidence simply does not tell you what it counted. Accuracy without scope is a very precise mystery."}]}
+  {id:"wraith",label:"Confront the ink shadow",type:"person",name:"The Tangle-Wraith",role:"Monster · eats missing context",portrait:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/characters/7000d8e9-e7a4-40fd-b150-9447a06fd99e.webp",track:"14-wrong-storage",intro:"It wears the number 87 as a crown. ‘Every thread in the whole application!’ it croaks, despite having no list of processes, no timestamp, and what appears to be a receipt stuck to its forehead.",clue:"The Wraith’s universal total is an inference unsupported by the plaque. A count without scope cannot establish every thread in an application.",topics:["Evidence scope","Thread"],lines:[{q:"Why are you so certain?",a:"Because I have a large number and a dramatic entrance. Neither is a collection method. You need the unit, boundary, source, timestamp, and version before making a system-wide claim."},{q:"Is 87 wrong?",a:"Not necessarily. It may be an accurate count of something. The evidence simply does not tell you what it counted. Accuracy without scope is a very precise mystery."}]},
+  {id:"gate-lock",label:"Examine the gate lock",type:"object",name:"The Iron Gate’s Lock",portrait:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/characters/a5f6c071-0df6-46b4-a364-c5e0f29c933f.webp",track:"10-museum-threshold",intro:"The lock has two tumblers marked EVIDENCE and SCOPE. It refuses to open for a number shouted confidently at it. Honestly, same.",clue:"A gate is like a guarded predicate: it opens only when the required conditions are actually satisfied. In concurrent code, a signal means check again; it does not prove the condition is true.",topics:["Condition variable","Evidence scope"],lines:[{q:"Is the bell enough to open you?",a:"No. A notification only says ‘check again.’ The protected condition must be checked while holding the right lock; a signal does not transfer ownership or prove the predicate."},{q:"Is Spark’s scheduler literally this lock?",a:"No. This is an analogy for condition-based coordination. In an incident, identify the actual shared state and synchronization mechanism."}]},
+  {id:"raven-pennant",label:"Examine the raven pennant",type:"object",name:"The Raven Pennant",portrait:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/characters/a5f6c071-0df6-46b4-a364-c5e0f29c933f.webp",track:"10-museum-threshold",intro:"A raven is embroidered on the manor pennant. It reports ‘87 THREADS’ from the tower, but has never looked at the process list, asked what ‘thread’ means, or checked its watch.",clue:"A measurement needs a named entity, unit, boundary, source, and timestamp. A distant dashboard label cannot prove whether it counts JVM threads, OS threads, Python workers, or task attempts.",topics:["Thread","Process","Task attempt"],lines:[{q:"Can the raven see every process from up there?",a:"No. A view is not a complete inventory. Identify which process produced the metric, how it was collected, and when."},{q:"Why is ‘87 threads’ not enough?",a:"It omits the process boundary, thread type, measurement method, and timestamp. Task attempts and worker processes are separate entities."}]}
  ],
  gate:{type:"multi",title:"The Gate’s First Question",prompt:"Which note should you trust before you open the estate?",choices:[{text:"Keep each measurement separate; record its unit, process or container boundary, method, and timestamp. Keep task attempts distinct from live threads.",correct:true},{text:"Add every number on the plaque and call the result the total Spark thread count.",correct:false},{text:"Use the largest value as the safest total; it must include everything.",correct:false}],hints:["A number needs a unit and a boundary before it can answer a question.","Spark tasks are work units. They are not OS threads or worker processes."],wrong:"The Wraith grows an extra crown and declares victory over arithmetic. Pip asks it to show the source file.",correct:"The chain slackens. The gate admits the evidence, then swings open toward the front hall."},
  lesson:{core:"Apache Spark is a distributed data-processing engine. PySpark is its Python interface. The driver coordinates work and executors run tasks over data partitions; deployment mode determines the exact process layout.",junior:"A Spark application can involve a Python client, driver, executor processes, JVM threads, and sometimes Python workers. A task is work, not a thread or process.",senior:"Count process roles separately: Python client, driver JVM, executor JVM, Python worker, task attempt, and JVM thread. The runtime path and deployment mode determine which exist.",architect:"A useful incident record is a scoped observation: entity and unit, PID or container, host, method, timestamp, runtime/JDK/Spark versions, and lifecycle context.",pros:["A labeled census makes unlike measurements comparable without adding unlike units.","Recording PID and time helps correlate counts with logs, task attempts, and container events."],tradeoffs:["Thread dumps and per-process metrics add collection overhead and can miss short-lived threads.","A single snapshot may miss peaks or hide which component created a thread."],pitfalls:["Do not call a task attempt a thread.","Do not assume Python worker count equals Python thread count.","Do not add process, JVM-thread, worker, and attempt counts into one total."],best:["Name the entity, unit, process boundary, source, method, timestamp, and versions.","Compare samples at aligned times and keep process-tree or container context.","Treat dashboard labels as clues until their collection scope is known."],terms:["Apache Spark","PySpark","Driver","Executor","Process","Thread","Task attempt"],refs:[["Spark cluster overview","https://spark.apache.org/docs/latest/cluster-overview.html"],["Spark monitoring guide","https://spark.apache.org/docs/latest/monitoring.html"]]}
@@ -1968,7 +2079,7 @@ const MOVE_PUZZLES = {
  retry:{name:"the duplicate-parcel handcart",image:"https://cdn.jsdelivr.net/gh/SauronShepherd/angelic-assets@main/games/wtf/throw-your-threads-in-the-air/assets/props/3bce8b07-79cf-460f-8d08-7905884068e9.webp",verb:"push",from:[29,73],to:[49,73],prompt:"Push the handcart toward Madame Retry’s ledger. Both parcels have the same seal; the cart has no opinion about exactly-once delivery.",reveal:"The receipt lists two physical attempts and one logical key. Retries can repeat external side effects; exactly-once behavior depends on the sink’s transaction or idempotency contract, not a universal Spark promise.",term:"Retry · speculation · idempotency"}
 };
 const HOTSPOT_POSITIONS = {
- gates:{pip:[20,74],"count-plaque":[52,53],wraith:[77,25]},
+ gates:{pip:[20,74],"count-plaque":[52,53],wraith:[77,25],"gate-lock":[52,79],"raven-pennant":[91,13]},
  manor:{pip:[48,58],clock:[31,32],portrait:[10,38]},
  gallery:{sister:[46,62],badge:[32,39],bell:[91,56],"edda-recording":[84,35]},
  laboratory:{jekyll:[27,62],hyde:[39,50],beaker:[87,38]},
@@ -2421,7 +2532,7 @@ init();
  const topbar = game?.querySelector(':scope > .topbar');
  const panels = [topbar, game?.querySelector('#bottomHud')].filter(Boolean);
  for (const panel of panels) {
-  const handle = panel === topbar ? game.querySelector(':scope > .top-hud-handle') : panel.querySelector('.hud-reveal-handle');
+  const handle = panel === topbar ? topbar.querySelector('.top-hud-handle') : panel.querySelector('.hud-reveal-handle');
   const sync = () => { if (handle) handle.setAttribute('aria-expanded', String(panel.matches(':hover,:focus-within') || handle.matches(':hover,:focus'))); };
   for (const target of [panel, handle].filter(Boolean)) {
    target.addEventListener('pointerenter', sync);
