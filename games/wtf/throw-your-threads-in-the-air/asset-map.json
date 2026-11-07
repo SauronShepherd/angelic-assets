@@ -600,5 +600,67 @@
     "sha256": "6403474a42cc24cd08df5ab080b22bf327f13a1e2b3991f39d08c4b1783cfcb9",
     "bytes": 491954,
     "mediaType": "image/webp"
+  },
+  {
+    "sourceFile": "commons:Gryllus campestris 02 (HS).ogg",
+    "uuidFile": "audio/ambient-crickets.ogg",
+    "sha256": "debbbbb06b459751bb8bdd349e4335481e3e4d6cfded5f602c1cf00880080017",
+    "bytes": 122525,
+    "mediaType": "audio/ogg",
+    "license": "CC BY-SA 3.0",
+    "author": "Harald Süpfle",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gryllus_campestris_02_(HS).ogg"
+  },
+  {
+    "sourceFile": "commons:Howling wind.ogg",
+    "uuidFile": "audio/ambient-wind.ogg",
+    "sha256": "5f24382221a8318072255b6a0d92ab6860457abf1b0ea27b28a874875117de94",
+    "bytes": 787636,
+    "mediaType": "audio/ogg",
+    "license": "CC0 1.0",
+    "author": "Tvabutzku1234",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Howling_wind.ogg"
+  },
+  {
+    "sourceFile": "commons:Wolf howls.ogg",
+    "uuidFile": "audio/ambient-wolf-howl.ogg",
+    "sha256": "29f84aef8c012e77f3fb13b004661b37ba2b1df93e7790479b81a863ba27dd7a",
+    "bytes": 362875,
+    "mediaType": "audio/ogg",
+    "license": "Public domain (U.S. federal work)",
+    "author": "U.S. Fish and Wildlife Service",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wolf_howls.ogg"
+  },
+  {
+    "sourceFile": "commons:Otus sunia.ogg",
+    "uuidFile": "audio/ambient-owl-call.ogg",
+    "sha256": "9f36a177f693816d6a82c7d575c639dee975cbd383d68c87d9181dd80b586cda",
+    "bytes": 115971,
+    "mediaType": "audio/ogg",
+    "license": "Public domain",
+    "author": "Raghu",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Otus_sunia.ogg"
+  },
+  {
+    "sourceFile": "commons:American Crow.ogg",
+    "uuidFile": "audio/ambient-crow-call.ogg",
+    "sha256": "121e9731cffbad8f9dda3f38496a455c739104b5cac1b67250b9f1dc5bdef402",
+    "bytes": 165816,
+    "mediaType": "audio/ogg",
+    "license": "Public domain",
+    "author": "G McGrane",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:American_Crow.ogg"
+  },
+  {
+    "sourceFile": "commons:Monster growls.ogg",
+    "uuidFile": "audio/ambient-creature-growl.ogg",
+    "sha256": "41c51b96d241298ec5502af1cf45261fa20c6269e88c6f51f31efc290ca14389",
+    "bytes": 498251,
+    "mediaType": "audio/ogg",
+    "license": "Public domain",
+    "author": "stilgar / PDSounds",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monster_growls.ogg"
   }
 ]
+
+
